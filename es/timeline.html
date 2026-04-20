@@ -3,136 +3,183 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cronograma | SMIO-Hexaly Challenge 2026</title>
+  <title>Cronograma · SMIO × Hexaly Challenge 2026</title>
+  <meta name="description" content="A community optimization competition organized by SMIO with Hexaly as Diamond partner. Benchmark your methods on 30 CLRP instances and present your results at XIV CSMIO 2026 in Monterrey.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SMIO × Hexaly · Location Routing Challenge 2026">
+  <meta property="og:description" content="A community optimization competition in partnership with Hexaly. Benchmark your methods on 30 CLRP instances — leaderboard goes live July 2026, winners present at XIV CSMIO in Monterrey.">
+  <meta property="og:image" content="https://challenge.smio.org/assets/og-card.png">
+  <meta property="og:url" content="https://challenge.smio.org/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-
   <nav class="nav">
     <div class="nav-inner">
-      <a href="index.html" class="nav-brand"><img src="../assets/smio_logo.png" alt="SMIO"> Challenge 2026</a>
-      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+      <a href="index.html" class="nav-brand"><img src="../assets/smio_logo.png" alt="SMIO"><img src="../assets/csmio_logo.png" alt="CSMIO"><span class="nav-brand-div"></span><img src="../assets/hexaly-logo-orange.svg" alt="Hexaly" class="nav-brand-hex"></a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">≡</button>
       <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="problem.html">Problema</a></li>
         <li><a href="competition.html">Competencia</a></li>
         <li><a href="timeline.html" class="active">Cronograma</a></li>
         <li><a href="prizes.html">Premios</a></li>
-        <li><a href="register.html">Registro</a></li>
-        <li><a href="../en/timeline.html" style="border:1px solid rgba(255,255,255,0.3); border-radius:4px; padding:0.3rem 0.6rem; font-size:0.82rem;">EN</a></li>
+        <li><a href="../en/timeline.html" class="nav-lang">EN</a></li>
+        <li><a href="register.html" class="nav-cta">Regístrate →</a></li>
       </ul>
     </div>
   </nav>
 
   <header class="page-header">
-    <div class="page-header-inner">
-      <h1>Cronograma</h1>
-      <p>Desde el anuncio hasta la ceremonia de premiaci&oacute;n &mdash; fechas clave del Challenge.</p>
+    <div class="nodeplot" data-nodemap data-seed="33" data-nodes="140" data-depots="4"
+         data-edge="rgba(26,30,60,0.18)" data-node="rgba(26,30,60,0.45)" data-depot="#E8793F" data-paper="#FDFBF7"></div>
+    <div class="wrap">
+      <div class="page-header-inner">
+        <div>
+          <div class="eyebrow">Cronograma · 03 / 05</div>
+          <h1 style="margin-top: 0.8rem;">Del anuncio<br>a la ceremonia de premiación.</h1>
+        </div>
+        <p class="page-header-desc">La ventana de competencia es un sprint de ejecución — los equipos tienen acceso al generador de instancias semanas antes de que caigan las reales. Desarrolla con calma y acelera cuando la tabla entre en vivo.</p>
+      </div>
     </div>
   </header>
 
-  <div class="content">
+  <section class="section">
+    <div class="wrap">
+      <div class="timeline-list">
 
-    <section>
-      <p>
-        La ventana de competencia es de aproximadamente <strong>3 semanas en julio de 2026</strong>. Los equipos habr&aacute;n tenido acceso al generador de instancias durante semanas antes de la apertura, por lo que la ventana oficial es un sprint de ejecuci&oacute;n sobre las instancias reales, no un per&iacute;odo de desarrollo desde cero.
-      </p>
-
-      <div class="timeline">
-
-        <div class="timeline-item highlight">
-          <div class="timeline-date">22&ndash;24 de abril, 2026</div>
-          <div class="timeline-title">EPIO y anuncio del Challenge</div>
-          <div class="timeline-desc">El Challenge se anuncia oficialmente en la clausura de la V EPIO (Escuela de Primavera en Investigaci&oacute;n de Operaciones de SMIO). Se publica la convocatoria, reglas y descripci&oacute;n del problema. Se abre el registro de equipos.</div>
+        <div class="tl-row is-key">
+          <div class="tl-date">22–24 ABR 2026</div>
+          <div class="tl-marker"><span></span></div>
+          <div class="tl-body">
+            <h3>EPIO y anuncio del Challenge</h3>
+            <p>Anuncio oficial durante la clausura del V EPIO (Escuela Virtual de Primavera de SMIO). Se publica la convocatoria, las reglas y la descripción del problema. Abre el registro de equipos.</p>
+          </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-date">Mayo &ndash; junio 2026</div>
-          <div class="timeline-title">Per&iacute;odo de preparaci&oacute;n</div>
-          <div class="timeline-desc">Los equipos se forman y registran. Difusi&oacute;n continua a trav&eacute;s de los canales de SMIO y Hexaly. Desarrollo del generador de instancias, verificador de soluciones y plataforma web.</div>
+        <div class="tl-row">
+          <div class="tl-date">MAY – JUN 2026</div>
+          <div class="tl-marker"><span></span></div>
+          <div class="tl-body">
+            <h3>Periodo de preparación</h3>
+            <p>Formación y registro de equipos. Difusión continua por canales de SMIO y Hexaly. Desarrollo del generador de instancias, verificador de soluciones y plataforma web.</p>
+          </div>
         </div>
 
-        <div class="timeline-item highlight">
-          <div class="timeline-date">Junio 2026</div>
-          <div class="timeline-title">Publicaci&oacute;n del generador de instancias</div>
-          <div class="timeline-desc">Se libera el c&oacute;digo del generador en Python para que los equipos puedan crear instancias de prueba y desarrollar sus m&eacute;todos. Se publica tambi&eacute;n una instancia de ejemplo con soluci&oacute;n factible y el c&oacute;digo del verificador. Las instancias oficiales <em>no</em> se publican en esta etapa.</div>
+        <div class="tl-row is-key">
+          <div class="tl-date">JUN 2026</div>
+          <div class="tl-marker"><span></span></div>
+          <div class="tl-body">
+            <h3>Liberación del generador de instancias</h3>
+            <p>Código de Python de código abierto para que los equipos creen instancias de prueba y desarrollen sus métodos. Se publican también una instancia de ejemplo con una solución factible y el código del verificador. Las instancias oficiales <em>no</em> se publican en esta etapa.</p>
+          </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-date">Junio &ndash; julio 2026</div>
-          <div class="timeline-title">Preparaci&oacute;n final</div>
-          <div class="timeline-desc">Generaci&oacute;n de las instancias oficiales (internas). Hexaly ejecuta su solver para producir las soluciones de referencia. Pruebas de la plataforma.</div>
+        <div class="tl-row">
+          <div class="tl-date">JUN – JUL 2026</div>
+          <div class="tl-marker"><span></span></div>
+          <div class="tl-body">
+            <h3>Preparación final</h3>
+            <p>Generación de las instancias oficiales (interno). Hexaly corre su solver para producir las soluciones base. Pruebas finales de la plataforma.</p>
+          </div>
         </div>
 
-        <div class="timeline-item highlight">
-          <div class="timeline-date">Mediados de julio 2026</div>
-          <div class="timeline-title">Lanzamiento de la competencia</div>
-          <div class="timeline-desc">Se publican las instancias oficiales y las soluciones de referencia de Hexaly. Se abre el env&iacute;o de soluciones. El tablero de posiciones entra en operaci&oacute;n.</div>
+        <div class="tl-row is-key">
+          <div class="tl-date">MED. JUL 2026</div>
+          <div class="tl-marker"><span></span></div>
+          <div class="tl-body">
+            <h3>Lanzamiento de la competencia</h3>
+            <p>Se publican las instancias oficiales y las soluciones base de Hexaly. Abre el envío de soluciones. La tabla de clasificación entra en vivo.</p>
+          </div>
         </div>
 
-        <div class="timeline-item highlight">
-          <div class="timeline-date">Mediados de julio &ndash; inicio de agosto 2026</div>
-          <div class="timeline-title">Ventana de competencia (~3 semanas)</div>
-          <div class="timeline-desc">Los equipos env&iacute;an soluciones a trav&eacute;s de la plataforma. El tablero de posiciones registra las mejores soluciones en tiempo real.</div>
+        <div class="tl-row is-key">
+          <div class="tl-date">MED. JUL – PPIOS. AGO</div>
+          <div class="tl-marker"><span></span></div>
+          <div class="tl-body">
+            <h3>Ventana de competencia · ~3 semanas</h3>
+            <p>Los equipos envían soluciones por la plataforma. La tabla registra las mejores soluciones de participantes en tiempo real. La puntuación por tiempo de liderazgo premia encontrar buenas soluciones pronto <em>y</em> mantenerlas.</p>
+          </div>
         </div>
 
-        <div class="timeline-item highlight">
-          <div class="timeline-date">Inicio de agosto 2026</div>
-          <div class="timeline-title">Cierre de la competencia</div>
-          <div class="timeline-desc">No se aceptan m&aacute;s env&iacute;os. Comienza la verificaci&oacute;n final de todas las soluciones.</div>
+        <div class="tl-row is-key">
+          <div class="tl-date">PPIOS. AGO 2026</div>
+          <div class="tl-marker"><span></span></div>
+          <div class="tl-body">
+            <h3>Cierre de la competencia</h3>
+            <p>Se dejan de aceptar envíos. Comienza la verificación final de todas las soluciones.</p>
+          </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-date">Agosto 2026</div>
-          <div class="timeline-title">Resultados y coordinaci&oacute;n</div>
-          <div class="timeline-desc">An&aacute;lisis de resultados y determinaci&oacute;n de ganadores. Contacto con equipos ganadores para coordinar presentaciones y log&iacute;stica de viaje para el CSMIO.</div>
+        <div class="tl-row">
+          <div class="tl-date">AGO 2026</div>
+          <div class="tl-marker"><span></span></div>
+          <div class="tl-body">
+            <h3>Resultados y coordinación</h3>
+            <p>Análisis de resultados y determinación de ganadores. Contacto con los equipos ganadores para coordinar presentaciones y logística de viaje para el CSMIO.</p>
+          </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-date">Septiembre 2026</div>
-          <div class="timeline-title">Preparaci&oacute;n del congreso</div>
-          <div class="timeline-desc">Preparaci&oacute;n de la sesi&oacute;n del Challenge en el programa del CSMIO. Materiales de difusi&oacute;n de resultados.</div>
+        <div class="tl-row">
+          <div class="tl-date">SEP 2026</div>
+          <div class="tl-marker"><span></span></div>
+          <div class="tl-body">
+            <h3>Preparación del congreso</h3>
+            <p>Preparación de la sesión del Challenge para el programa del CSMIO. Materiales de difusión de resultados.</p>
+          </div>
         </div>
 
-        <div class="timeline-item highlight">
-          <div class="timeline-date">7&ndash;9 de octubre, 2026</div>
-          <div class="timeline-title">CSMIO 2026 en Monterrey</div>
-          <div class="timeline-desc">Sesi&oacute;n de presentaci&oacute;n de resultados del Challenge. Taller de Hexaly. Ceremonia de premiaci&oacute;n. Los ganadores presentan sus enfoques a la comunidad.</div>
+        <div class="tl-row is-key">
+          <div class="tl-date">7–9 OCT 2026</div>
+          <div class="tl-marker"><span></span></div>
+          <div class="tl-body">
+            <h3>CSMIO 2026 · Monterrey</h3>
+            <p>Sesión de presentación de resultados del Challenge. Taller de Hexaly. Ceremonia de premiación. Los ganadores presentan sus enfoques ante la comunidad.</p>
+          </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-date">Post-congreso</div>
-          <div class="timeline-title">Benchmark permanente</div>
-          <div class="timeline-desc">Publicaci&oacute;n de todos los resultados, instancias y soluciones como un benchmark permanente para la comunidad cient&iacute;fica.</div>
+        <div class="tl-row">
+          <div class="tl-date">POST-CONGRESO</div>
+          <div class="tl-marker"><span></span></div>
+          <div class="tl-body">
+            <h3>Benchmark permanente</h3>
+            <p>Publicación de todos los resultados, instancias y soluciones como un benchmark permanente para la comunidad de investigación.</p>
+          </div>
         </div>
 
       </div>
-    </section>
 
-    <section>
-      <div class="callout callout-orange">
-        <h3>Nota sobre las fechas</h3>
-        <p>Las fechas exactas de lanzamiento y cierre de la competencia se confirmar&aacute;n una vez que el generador de instancias est&eacute; finalizado. Las fechas anteriores son tentativas y est&aacute;n sujetas a ajustes menores. Sigue los canales de SMIO para actualizaciones oficiales.</p>
+      <div class="callout" style="margin-top: 3rem; border-left: 3px solid var(--orange);">
+        <span class="callout-n">NOTA</span>
+        <div>
+          <h3>Las fechas son tentativas</h3>
+          <p>Las fechas exactas de lanzamiento y cierre se confirmarán una vez finalizado el generador de instancias. Sigue los canales de SMIO para las actualizaciones oficiales.</p>
+        </div>
       </div>
-    </section>
-
-  </div>
+    </div>
+  </section>
 
   <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-logos">
-        <img src="../assets/smio_logo.png" alt="SMIO">
-        <img src="../assets/csmio_logo.png" alt="CSMIO 2026">
-        <img src="../assets/hexaly-logo-white.svg" alt="Hexaly" style="height:28px;">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <div style="font-family: var(--font-sans); font-size: 1.1rem; color: var(--paper); margin-bottom: 0.8rem; font-weight: 500; letter-spacing: -0.02em;">SMIO × Hexaly<br>Location Routing Challenge 2026</div>
+          <p style="color: oklch(0.65 0.01 80); font-size: 0.88rem;">Una competencia comunitaria de optimización, organizada por la Sociedad Mexicana de Investigación de Operaciones.</p>
+        </div>
+        <div><h4>Challenge</h4><a href="index.html">Inicio</a><a href="problem.html">Problema</a><a href="competition.html">Competencia</a><a href="timeline.html">Cronograma</a><a href="prizes.html">Premios</a><a href="register.html">Registro</a></div>
+        <div><h4>Organizaciones</h4><a href="https://www.smio.org" target="_blank">smio.org</a><a href="https://csmio2026.my.canva.site/" target="_blank">csmio2026.my.canva.site</a><a href="https://www.hexaly.com" target="_blank">hexaly.com</a><a href="mailto:smio.mexico@gmail.com">smio.mexico@gmail.com</a></div>
+        <div><h4>Síguenos</h4><a href="https://www.linkedin.com/company/sociedad-mexicana-de-investigaci%C3%B3n-de-operaciones" target="_blank">LinkedIn</a><a href="https://www.instagram.com/smio.mexico" target="_blank">Instagram</a><a href="https://www.youtube.com/@smio.mexico" target="_blank">YouTube</a></div>
       </div>
-      <div>
-        <a href="http://www.smio.org" target="_blank">smio.org</a> &middot;
-        <a href="mailto:smio.mexico@gmail.com">smio.mexico@gmail.com</a>
+      <div class="footer-bottom">
+        <div class="footer-logos"><img src="../assets/smio_logo.png" alt="SMIO"><img src="../assets/csmio_logo.png" alt="CSMIO 2026"><img src="../assets/hexaly-logo-white.svg" alt="Hexaly" class="hexaly-mark"></div>
+        <div>© 2026 · CSMIO Monterrey · 7–9 oct</div>
       </div>
     </div>
   </footer>
-
+  <script src="../shared/nodemap.js"></script>
 </body>
 </html>

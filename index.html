@@ -3,112 +3,223 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SMIO-Hexaly Location Routing Challenge | Monterrey 2026</title>
+  <title>SMIO × Hexaly Location Routing Challenge · Monterrey 2026</title>
+  <meta name="description" content="A community optimization competition organized by SMIO with Hexaly as Diamond partner. Benchmark your methods on 30 CLRP instances and present your results at XIV CSMIO 2026 in Monterrey.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SMIO × Hexaly · Location Routing Challenge 2026">
+  <meta property="og:description" content="A community optimization competition in partnership with Hexaly. Benchmark your methods on 30 CLRP instances — leaderboard goes live July 2026, winners present at XIV CSMIO in Monterrey.">
+  <meta property="og:image" content="https://challenge.smio.org/assets/og-card.png">
+  <meta property="og:url" content="https://challenge.smio.org/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
-    .lang-hero {
+    body { min-height: 100vh; display: flex; flex-direction: column; }
+    .splash {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, #1a3a4a 100%);
-      color: var(--white);
-      text-align: center;
-      padding: 2rem;
       position: relative;
-      overflow: hidden;
     }
-    .lang-hero::before {
-      content: '';
-      position: absolute;
-      top: -40%;
-      right: -15%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(15,164,160,0.12) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-    .lang-inner { position: relative; z-index: 1; max-width: 700px; }
-    .lang-logos {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 2.5rem;
-    }
-    .lang-logos img { height: 70px; }
-    .lang-inner h1 { color: var(--white); font-size: 2.8rem; margin-bottom: 0.3em; }
-    .lang-inner .accent { color: var(--teal-light); }
-    .lang-subtitle {
-      font-size: 1.15rem;
-      color: rgba(255,255,255,0.7);
-      margin-bottom: 3rem;
-    }
-    .lang-buttons {
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .lang-btn {
+    .splash-left {
+      padding: 3rem;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 1.5rem 3rem;
-      border-radius: 12px;
-      text-decoration: none;
-      font-family: var(--font-body);
+      justify-content: space-between;
+      border-right: 1px solid var(--rule);
+      position: relative;
+      z-index: 1;
+    }
+    .splash-right {
+      position: relative;
+      overflow: hidden;
+      background: var(--paper-2);
+    }
+    .splash-right > div {
+      position: absolute; inset: 0;
+    }
+    .splash-mark {
+      display: flex; align-items: center; gap: 0.8rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .splash-mark-pill {
+      width: 32px; height: 32px;
+      display: grid; place-items: center;
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: 4px;
       font-weight: 700;
-      font-size: 1.1rem;
-      transition: all 0.25s;
+      font-size: 0.82rem;
     }
-    .lang-btn-en {
-      background: var(--teal);
-      color: var(--white);
+    .splash h1 {
+      font-size: clamp(2.2rem, 5vw, 4.4rem);
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+      max-width: 14ch;
+      margin-bottom: 1.5rem;
     }
-    .lang-btn-en:hover {
-      background: var(--teal-dark);
-      color: var(--white);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(15,164,160,0.3);
+    .splash h1 em {
+      color: var(--orange);
+      font-style: italic;
+      font-weight: 400;
     }
-    .lang-btn-es {
-      background: var(--orange);
-      color: var(--white);
+    .splash-meta {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      margin-bottom: 0.8rem;
+      display: flex; gap: 1.4rem; flex-wrap: wrap;
     }
-    .lang-btn-es:hover {
-      background: var(--orange-light);
-      color: var(--white);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(212,101,42,0.3);
+    .splash-sub {
+      font-size: 1.05rem;
+      color: var(--ink-2);
+      max-width: 40ch;
+      margin-bottom: 2.5rem;
+      line-height: 1.55;
     }
-    .lang-btn span { font-size: 0.85rem; font-weight: 400; opacity: 0.85; }
+    .splash-lang-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      max-width: 420px;
+    }
+    .splash-lang-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      margin-bottom: 0.2rem;
+    }
+    .splash-lang {
+      display: grid;
+      grid-template-columns: 80px 1fr auto;
+      align-items: center;
+      gap: 1.2rem;
+      padding: 1.2rem 1.4rem;
+      border: 1px solid var(--rule);
+      background: var(--paper);
+      transition: border-color 0.15s, background 0.15s, transform 0.15s;
+    }
+    .splash-lang:hover { border-color: var(--ink); background: var(--paper); transform: translateX(3px); }
+    .splash-lang-code {
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+    }
+    .splash-lang-name {
+      font-size: 1.05rem;
+      color: var(--ink);
+      font-weight: 500;
+    }
+    .splash-lang-name small {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      color: var(--ink-3);
+      font-weight: 400;
+      margin-top: 0.15rem;
+    }
+    .splash-lang-arrow {
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      color: var(--ink-3);
+    }
+    .splash-lang:hover .splash-lang-arrow { color: var(--orange); }
+
+    .splash-foot {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      gap: 2rem; flex-wrap: wrap;
+      border-top: 1px solid var(--rule);
+      padding-top: 1.5rem;
+    }
+    .splash-foot-logos {
+      display: flex; align-items: center; gap: 1.3rem;
+    }
+    .splash-foot-logos img { height: 44px; opacity: 1; }
+    .splash-foot-logos .hex { height: 40px; }
+    .splash-foot-meta {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--ink-3);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-align: right;
+    }
+    @media (max-width: 900px) {
+      .splash { grid-template-columns: 1fr; }
+      .splash-right { min-height: 260px; order: -1; border-bottom: 1px solid var(--rule); }
+      .splash-left { padding: 2.2rem; }
+    }
   </style>
 </head>
 <body>
-  <div class="lang-hero">
-    <div class="lang-inner">
-      <div class="lang-logos">
-        <img src="assets/smio_logo.png" alt="SMIO">
-        <img src="assets/csmio_logo.png" alt="XIV CSMIO Monterrey">
-        <img src="assets/hexaly-logo-white.svg" alt="Hexaly" style="height:40px;">
+
+  <main class="splash">
+    <div class="splash-left">
+      <div>
+        <div class="splash-mark">
+          SMIO × Hexaly · Ed. 01 / 2026
+        </div>
       </div>
-      <h1>SMIO&ndash;Hexaly<br><span class="accent">Location Routing Challenge</span></h1>
-      <p class="lang-subtitle">Monterrey 2026</p>
-      <div class="lang-buttons">
-        <a href="en/index.html" class="lang-btn lang-btn-en">
-          English
-          <span>View in English</span>
-        </a>
-        <a href="es/index.html" class="lang-btn lang-btn-es">
-          Espa&ntilde;ol
-          <span>Ver en espa&ntilde;ol</span>
-        </a>
+
+      <div style="margin: 3rem 0;">
+        <div class="splash-meta">
+          <span>Monterrey · Mexico</span>
+          <span>Oct 7–9, 2026</span>
+          <span>XIV CSMIO</span>
+        </div>
+        <h1>Location Routing <em>Challenge</em>.</h1>
+        <p class="splash-sub">
+          A community optimization competition organized by the Mexican Society of Operations Research, with Hexaly as Diamond sponsor. Benchmark your methods on 30 CLRP instances and present your results at CSMIO 2026.
+        </p>
+
+        <div class="splash-lang-group">
+          <div class="splash-lang-label">Choose a language · Elige idioma</div>
+          <a href="en/index.html" class="splash-lang">
+            <div class="splash-lang-code">EN</div>
+            <div class="splash-lang-name">English<small>View in English</small></div>
+            <div class="splash-lang-arrow">→</div>
+          </a>
+          <a href="es/index.html" class="splash-lang">
+            <div class="splash-lang-code">ES</div>
+            <div class="splash-lang-name">Español<small>Ver en español</small></div>
+            <div class="splash-lang-arrow">→</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="splash-foot">
+        <div class="splash-foot-logos">
+          <img src="assets/smio_logo.png" alt="SMIO">
+          <a href="https://csmio2026.my.canva.site/" target="_blank" rel="noopener"><img src="assets/csmio_logo.png" alt="CSMIO 2026"></a>
+          <img src="assets/hexaly-logo-orange.svg" alt="Hexaly" class="hex">
+        </div>
+        <div class="splash-foot-meta">
+          Organized by SMIO<br>Diamond sponsor: Hexaly
+        </div>
       </div>
     </div>
-  </div>
+
+    <div class="splash-right">
+      <div data-nodemap data-seed="101" data-nodes="320" data-depots="9"
+           data-edge="rgba(26,30,60,0.16)" data-node="rgba(26,30,60,0.42)" data-depot="#E8793F" data-paper="#F7F4EE"></div>
+    </div>
+  </main>
+
+  <script src="shared/nodemap.js"></script>
 </body>
 </html>
