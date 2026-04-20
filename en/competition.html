@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Competition | SMIO-Hexaly Challenge 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="../assets/smio_logo.png" alt="SMIO">
+        Challenge 2026
+      </a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="problem.html">Problem</a></li>
+        <li><a href="competition.html" class="active">Competition</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="prizes.html">Prizes</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="../es/competition.html" style="border:1px solid rgba(255,255,255,0.3); border-radius:4px; padding:0.3rem 0.6rem; font-size:0.82rem;">ES</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <h1>Competition Format</h1>
+      <p>Two tracks, one leaderboard, and a clear path to CSMIO 2026 in Monterrey.</p>
+    </div>
+  </header>
+
+  <div class="content">
+
+    <section>
+      <h2>Tracks</h2>
+      <p>The challenge features two tracks. All participants in both tracks must hold a current <a href="http://www.smio.org" target="_blank">SMIO membership</a>. Through the <strong>ALIO alliance</strong>, members of other Latin American OR societies can obtain SMIO membership at a discounted rate.</p>
+
+      <div class="card-grid">
+        <div class="card" style="border-top: 4px solid var(--teal);">
+          <span class="tag tag-teal">Undergraduate Track</span>
+          <h3 style="margin-top:0.8rem;">For Students</h3>
+          <p>Teams of up to <strong>3 current undergraduate students</strong> plus <strong>1 guide</strong> (defined as anyone who is not a current undergraduate student &mdash; e.g., a graduate student, professor, or industry professional).</p>
+          <p>This track aligns with SMIO's educational mission and encourages mentorship in the OR community.</p>
+        </div>
+        <div class="card" style="border-top: 4px solid var(--orange);">
+          <span class="tag tag-orange">Open Track</span>
+          <h3 style="margin-top:0.8rem;">For Everyone</h3>
+          <p>Teams of up to <strong>3 participants</strong>, no restrictions on profile. Open to students, researchers, and industry professionals.</p>
+          <p>This track maximizes the quality of solutions and opens the competition to the broader OR community.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Scoring System</h2>
+
+      <h3>Hexaly Baseline</h3>
+      <p>
+        Before the competition opens, <strong>Hexaly Optimizer</strong> runs on all 30 instances to produce a baseline solution for each one. These baselines are published as a reference but <strong>do not participate in the leaderboard</strong>. The leaderboard tracks only solutions submitted by participant teams.
+      </p>
+      <p>
+        At the end of the competition, results are presented alongside the Hexaly baseline, providing a clear comparison for each instance. This preserves the narrative of the community benchmarking against a strong industrial solver while ensuring the competition always has a well-defined winner.
+      </p>
+
+      <h3>Lead-Time Scoring</h3>
+      <p>
+        The scoring system rewards teams that find good solutions <strong>early</strong> and <strong>hold</strong> them. For each instance, the team holding the best participant solution accumulates points for every calendar day they maintain it. A bonus is awarded for holding the best solution at the close of the competition.
+      </p>
+      <div class="callout">
+        <p><strong>Score</strong> = (days holding the best solution across all instances) + B &times; (number of instances where you hold the final best solution)</p>
+        <p>The bonus value B will be announced with the full competition rules.</p>
+      </div>
+      <p>The team with the highest total score wins in each track.</p>
+
+      <h3>Leaderboards</h3>
+      <p>Three public views will be maintained during the competition:</p>
+      <table class="styled-table">
+        <thead>
+          <tr><th>Leaderboard</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Per-instance</strong></td><td>Chronological evolution of the best participant solution for each instance (team, cost, timestamp).</td></tr>
+          <tr><td><strong>Global ranking</strong></td><td>Aggregate score of each team, updated in real time.</td></tr>
+          <tr><td><strong>Hexaly comparison</strong></td><td>For each instance, the Hexaly baseline cost alongside the current best participant solution, with the percentage gap.</td></tr>
+        </tbody>
+      </table>
+      <p>Solutions that set a new best are recorded but <strong>not published</strong> until the competition ends, preventing teams from locally improving each other's results.</p>
+    </section>
+
+    <section>
+      <h2>Rules</h2>
+      <div style="display:flex; flex-direction:column; gap:0.8rem;">
+        <div class="callout">
+          <p><strong>No hardware restrictions.</strong> Teams may use any computational resources available to them.</p>
+        </div>
+        <div class="callout">
+          <p><strong>Any software is allowed.</strong> Commercial solvers, open-source tools, or custom implementations. Hexaly provides free academic licenses to all registered participants.</p>
+        </div>
+        <div class="callout">
+          <p><strong>SMIO membership required.</strong> Every participant must be a valid SMIO member. Through the ALIO alliance, members of other national societies can obtain SMIO membership at a discounted rate.</p>
+        </div>
+        <div class="callout">
+          <p><strong>One team per person.</strong> Each person may belong to only one team.</p>
+        </div>
+        <div class="callout">
+          <p><strong>Official submissions only.</strong> Solutions must be submitted through the web platform. No manual or email submissions.</p>
+        </div>
+        <div class="callout">
+          <p><strong>Results are public.</strong> By participating, teams agree that their final solutions (but not their code) may be published as part of a post-competition benchmark library.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logos">
+        <img src="../assets/smio_logo.png" alt="SMIO">
+        <img src="../assets/csmio_logo.png" alt="CSMIO 2026">
+        <img src="../assets/hexaly-logo-white.svg" alt="Hexaly" style="height:28px;">
+      </div>
+      <div>
+        <a href="http://www.smio.org" target="_blank">smio.org</a> &middot;
+        <a href="mailto:smio.mexico@gmail.com">smio.mexico@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

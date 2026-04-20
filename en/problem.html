@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problem | SMIO-Hexaly Challenge 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="../assets/smio_logo.png" alt="SMIO">
+        Challenge 2026
+      </a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="problem.html" class="active">Problem</a></li>
+        <li><a href="competition.html">Competition</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="prizes.html">Prizes</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="../es/problem.html" style="border:1px solid rgba(255,255,255,0.3); border-radius:4px; padding:0.3rem 0.6rem; font-size:0.82rem;">ES</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <h1>The Problem</h1>
+      <p>Capacitated Location Routing Problem (CLRP) &mdash; combining facility location with vehicle routing.</p>
+    </div>
+  </header>
+
+  <div class="content">
+
+    <section>
+      <h2>Overview</h2>
+      <p>
+        The <strong>Capacitated Location Routing Problem (CLRP)</strong> is an optimization problem that combines two layers of decision-making: <strong>strategic</strong> decisions about where to open depots and <strong>operational</strong> decisions about how to route vehicles from those depots to serve customers.
+      </p>
+      <p>
+        Given a set of potential depot locations (each with an opening cost, a capacity limit, and a maximum number of vehicles) and a set of customers with known demands, the goal is to simultaneously decide which depots to open, assign customers to open depots, and design vehicle routes that minimize the total cost. The total cost includes depot opening costs, a fixed cost per dispatched vehicle, and the total travel distance.
+      </p>
+    </section>
+
+    <section>
+      <h2>Key Decisions</h2>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon" style="background:linear-gradient(135deg, var(--navy), var(--navy-light));">&#127970;</div>
+          <h3>Depot Opening</h3>
+          <p>Which depots to open from a set of potential locations. Each depot has an opening cost, a capacity (maximum total demand it can serve), and a limit on the number of vehicles it can accommodate.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" style="background:linear-gradient(135deg, var(--orange), var(--orange-light));">&#128666;</div>
+          <h3>Vehicle Routing</h3>
+          <p>For each open depot, design routes for a fleet of identical vehicles. Each route starts and ends at its depot, and the total demand on a route cannot exceed the vehicle capacity.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#128205;</div>
+          <h3>Customer Assignment</h3>
+          <p>Every customer must be assigned to exactly one open depot and visited by exactly one route from that depot. No customer can be split across depots or routes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Constraints</h2>
+      <p>A feasible solution must satisfy all of the following:</p>
+      <table class="styled-table">
+        <thead>
+          <tr><th>Constraint</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Customer service</strong></td><td>Every customer is visited exactly once by exactly one route.</td></tr>
+          <tr><td><strong>Depot assignment</strong></td><td>Each route operates from exactly one open depot. All customers on a route are assigned to that depot.</td></tr>
+          <tr><td><strong>Vehicle capacity</strong></td><td>The total demand of customers on any single route does not exceed the vehicle capacity Q.</td></tr>
+          <tr><td><strong>Depot capacity</strong></td><td>The total demand assigned to a depot does not exceed its capacity.</td></tr>
+          <tr><td><strong>Vehicle limit</strong></td><td>The number of routes operating from a depot does not exceed its maximum number of vehicles.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Objective</h2>
+      <p>Minimize the total cost, which consists of three components:</p>
+      <div class="callout">
+        <p><strong>Total cost</strong> = (depot opening costs) + (fixed cost per route dispatched) + (total travel distance of all routes)</p>
+      </div>
+      <p>
+        This three-part objective captures the trade-off between opening fewer depots (cheaper strategically) and routing efficiency (which may require more depots closer to customers).
+      </p>
+    </section>
+
+    <section>
+      <h2>Industrial Relevance</h2>
+      <p>
+        The CLRP is directly relevant to Mexican industry. Companies such as <strong>OXXO</strong>, <strong>Bimbo</strong>, and <strong>FEMSA</strong> routinely face decisions about where to place distribution centers while simultaneously optimizing delivery routes. This problem captures the essence of those real-world decisions.
+      </p>
+      <p>
+        From an algorithmic perspective, the CLRP sits at a difficulty sweet spot: it combines strategic facility location with operational routing, so no single algorithmic paradigm dominates. The competition is open to teams using metaheuristics, decomposition methods, branch-and-price, matheuristics, machine learning, or hybrid approaches.
+      </p>
+      <p>
+        Compared to the well-studied CVRP, there is significantly less benchmark saturation for the LRP. This challenge fills a genuine gap, and any results carry higher novelty for the community.
+      </p>
+    </section>
+
+    <section>
+      <h2>Technical Specification</h2>
+      <div class="callout callout-orange">
+        <h3>Coming Soon</h3>
+        <p>The full technical specification &mdash; including the mathematical formulation, instance file format, solution file format, and the solution verifier &mdash; will be published alongside the instance generator in <strong>June 2026</strong>. A sample instance with a feasible solution will also be provided at that time.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Instance Design</h2>
+      <p>The challenge will feature <strong>30 instances</strong> generated by an open-source Python generator, covering:</p>
+      <table class="styled-table">
+        <thead>
+          <tr><th>Dimension</th><th>Range</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Customers</td><td>200 &ndash; 3,000</td></tr>
+          <tr><td>Depots</td><td>10 &ndash; 50</td></tr>
+          <tr><td>Distance type</td><td>Euclidean symmetric (small/medium) and asymmetric (large)</td></tr>
+        </tbody>
+      </table>
+      <p>
+        Instances will vary across customer distribution patterns (uniform, clustered, mixed), depot positioning strategies, demand distributions, and capacity tightness levels to prevent over-specialization.
+      </p>
+    </section>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logos">
+        <img src="../assets/smio_logo.png" alt="SMIO">
+        <img src="../assets/csmio_logo.png" alt="CSMIO 2026">
+        <img src="../assets/hexaly-logo-white.svg" alt="Hexaly" style="height:28px;">
+      </div>
+      <div>
+        <a href="http://www.smio.org" target="_blank">smio.org</a> &middot;
+        <a href="mailto:smio.mexico@gmail.com">smio.mexico@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

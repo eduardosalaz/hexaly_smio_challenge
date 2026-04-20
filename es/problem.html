@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problema | SMIO-Hexaly Challenge 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand"><img src="../assets/smio_logo.png" alt="SMIO"> Challenge 2026</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="problem.html" class="active">Problema</a></li>
+        <li><a href="competition.html">Competencia</a></li>
+        <li><a href="timeline.html">Cronograma</a></li>
+        <li><a href="prizes.html">Premios</a></li>
+        <li><a href="register.html">Registro</a></li>
+        <li><a href="../en/problem.html" style="border:1px solid rgba(255,255,255,0.3); border-radius:4px; padding:0.3rem 0.6rem; font-size:0.82rem;">EN</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <h1>El Problema</h1>
+      <p>Problema de Localizaci&oacute;n-Ruteo con Capacidades (CLRP) &mdash; combinando localizaci&oacute;n de instalaciones con ruteo de veh&iacute;culos.</p>
+    </div>
+  </header>
+
+  <div class="content">
+
+    <section>
+      <h2>Descripci&oacute;n general</h2>
+      <p>
+        El <strong>Problema de Localizaci&oacute;n-Ruteo con Capacidades (CLRP)</strong> es un problema de optimizaci&oacute;n que combina dos niveles de toma de decisiones: decisiones <strong>estrat&eacute;gicas</strong> sobre d&oacute;nde abrir dep&oacute;sitos y decisiones <strong>operativas</strong> sobre c&oacute;mo rutear veh&iacute;culos desde esos dep&oacute;sitos para servir a los clientes.
+      </p>
+      <p>
+        Dado un conjunto de ubicaciones potenciales para dep&oacute;sitos (cada uno con un costo de apertura, un l&iacute;mite de capacidad y un n&uacute;mero m&aacute;ximo de veh&iacute;culos) y un conjunto de clientes con demandas conocidas, el objetivo es decidir simult&aacute;neamente qu&eacute; dep&oacute;sitos abrir, asignar clientes a dep&oacute;sitos abiertos y dise&ntilde;ar rutas de veh&iacute;culos que minimicen el costo total. El costo total incluye costos de apertura de dep&oacute;sitos, un costo fijo por veh&iacute;culo despachado y la distancia total de viaje.
+      </p>
+    </section>
+
+    <section>
+      <h2>Decisiones clave</h2>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon" style="background:linear-gradient(135deg, var(--navy), var(--navy-light));">&#127970;</div>
+          <h3>Apertura de dep&oacute;sitos</h3>
+          <p>Qu&eacute; dep&oacute;sitos abrir de un conjunto de ubicaciones potenciales. Cada dep&oacute;sito tiene un costo de apertura, una capacidad (demanda total m&aacute;xima que puede servir) y un l&iacute;mite en el n&uacute;mero de veh&iacute;culos.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" style="background:linear-gradient(135deg, var(--orange), var(--orange-light));">&#128666;</div>
+          <h3>Ruteo de veh&iacute;culos</h3>
+          <p>Para cada dep&oacute;sito abierto, dise&ntilde;ar rutas para una flota de veh&iacute;culos id&eacute;nticos. Cada ruta inicia y termina en su dep&oacute;sito, y la demanda total en una ruta no puede exceder la capacidad del veh&iacute;culo.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#128205;</div>
+          <h3>Asignaci&oacute;n de clientes</h3>
+          <p>Cada cliente debe ser asignado a exactamente un dep&oacute;sito abierto y visitado por exactamente una ruta de ese dep&oacute;sito. Ning&uacute;n cliente puede dividirse entre dep&oacute;sitos o rutas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Restricciones</h2>
+      <p>Una soluci&oacute;n factible debe satisfacer todas las siguientes condiciones:</p>
+      <table class="styled-table">
+        <thead>
+          <tr><th>Restricci&oacute;n</th><th>Descripci&oacute;n</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Servicio al cliente</strong></td><td>Todo cliente es visitado exactamente una vez por exactamente una ruta.</td></tr>
+          <tr><td><strong>Asignaci&oacute;n a dep&oacute;sito</strong></td><td>Cada ruta opera desde exactamente un dep&oacute;sito abierto. Todos los clientes en una ruta est&aacute;n asignados a ese dep&oacute;sito.</td></tr>
+          <tr><td><strong>Capacidad del veh&iacute;culo</strong></td><td>La demanda total de los clientes en cualquier ruta no excede la capacidad del veh&iacute;culo Q.</td></tr>
+          <tr><td><strong>Capacidad del dep&oacute;sito</strong></td><td>La demanda total asignada a un dep&oacute;sito no excede su capacidad.</td></tr>
+          <tr><td><strong>L&iacute;mite de veh&iacute;culos</strong></td><td>El n&uacute;mero de rutas que operan desde un dep&oacute;sito no excede su n&uacute;mero m&aacute;ximo de veh&iacute;culos.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Funci&oacute;n objetivo</h2>
+      <p>Minimizar el costo total, compuesto por tres componentes:</p>
+      <div class="callout">
+        <p><strong>Costo total</strong> = (costos de apertura de dep&oacute;sitos) + (costo fijo por ruta despachada) + (distancia total de viaje de todas las rutas)</p>
+      </div>
+      <p>
+        Este objetivo de tres partes captura la disyuntiva entre abrir pocos dep&oacute;sitos (m&aacute;s barato estrat&eacute;gicamente) y la eficiencia del ruteo (que puede requerir m&aacute;s dep&oacute;sitos m&aacute;s cercanos a los clientes).
+      </p>
+    </section>
+
+    <section>
+      <h2>Relevancia industrial</h2>
+      <p>
+        El CLRP es directamente relevante para la industria mexicana. Empresas como <strong>OXXO</strong>, <strong>Bimbo</strong> y <strong>FEMSA</strong> enfrentan rutinariamente decisiones sobre d&oacute;nde ubicar centros de distribuci&oacute;n mientras optimizan simult&aacute;neamente las rutas de entrega. Este problema captura la esencia de esas decisiones del mundo real.
+      </p>
+      <p>
+        Desde el punto de vista algor&iacute;tmico, el CLRP se sit&uacute;a en un punto de dificultad ideal: combina localizaci&oacute;n estrat&eacute;gica de instalaciones con ruteo operativo, por lo que ning&uacute;n paradigma algor&iacute;tmico domina. La competencia est&aacute; abierta a equipos que usen metaheur&iacute;sticas, m&eacute;todos de descomposici&oacute;n, branch-and-price, matheur&iacute;sticas, aprendizaje autom&aacute;tico o enfoques h&iacute;bridos.
+      </p>
+      <p>
+        Comparado con el CVRP, existe significativamente menos saturaci&oacute;n de benchmarks para el LRP. Este Challenge llena un vac&iacute;o genuino y los resultados tendr&aacute;n mayor novedad para la comunidad.
+      </p>
+    </section>
+
+    <section>
+      <h2>Especificaci&oacute;n t&eacute;cnica</h2>
+      <div class="callout callout-orange">
+        <h3>Pr&oacute;ximamente</h3>
+        <p>La especificaci&oacute;n t&eacute;cnica completa &mdash; incluyendo la formulaci&oacute;n matem&aacute;tica, el formato de instancias, el formato de soluciones y el verificador &mdash; se publicar&aacute; junto con el generador de instancias en <strong>junio de 2026</strong>. Tambi&eacute;n se proporcionar&aacute; una instancia de ejemplo con una soluci&oacute;n factible.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Dise&ntilde;o de instancias</h2>
+      <p>El Challenge contar&aacute; con <strong>30 instancias</strong> generadas por un generador de c&oacute;digo abierto en Python, cubriendo:</p>
+      <table class="styled-table">
+        <thead>
+          <tr><th>Dimensi&oacute;n</th><th>Rango</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Clientes</td><td>200 &ndash; 3,000</td></tr>
+          <tr><td>Dep&oacute;sitos</td><td>10 &ndash; 50</td></tr>
+          <tr><td>Tipo de distancia</td><td>Euclidiana sim&eacute;trica (peque&ntilde;a/mediana) y asim&eacute;trica (grande)</td></tr>
+        </tbody>
+      </table>
+      <p>
+        Las instancias variar&aacute;n en patrones de distribuci&oacute;n de clientes (uniforme, agrupada, mixta), estrategias de posicionamiento de dep&oacute;sitos, distribuciones de demanda y niveles de estrechez de capacidad para prevenir la sobre-especializaci&oacute;n.
+      </p>
+    </section>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logos">
+        <img src="../assets/smio_logo.png" alt="SMIO">
+        <img src="../assets/csmio_logo.png" alt="CSMIO 2026">
+        <img src="../assets/hexaly-logo-white.svg" alt="Hexaly" style="height:28px;">
+      </div>
+      <div>
+        <a href="http://www.smio.org" target="_blank">smio.org</a> &middot;
+        <a href="mailto:smio.mexico@gmail.com">smio.mexico@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

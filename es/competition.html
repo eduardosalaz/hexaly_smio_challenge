@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Competencia | SMIO-Hexaly Challenge 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand"><img src="../assets/smio_logo.png" alt="SMIO"> Challenge 2026</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="problem.html">Problema</a></li>
+        <li><a href="competition.html" class="active">Competencia</a></li>
+        <li><a href="timeline.html">Cronograma</a></li>
+        <li><a href="prizes.html">Premios</a></li>
+        <li><a href="register.html">Registro</a></li>
+        <li><a href="../en/competition.html" style="border:1px solid rgba(255,255,255,0.3); border-radius:4px; padding:0.3rem 0.6rem; font-size:0.82rem;">EN</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <h1>Formato de la competencia</h1>
+      <p>Dos categor&iacute;as, un tablero de posiciones y un camino directo al CSMIO 2026 en Monterrey.</p>
+    </div>
+  </header>
+
+  <div class="content">
+
+    <section>
+      <h2>Categor&iacute;as</h2>
+      <p>El Challenge cuenta con dos categor&iacute;as. Todos los participantes deben contar con una <a href="http://www.smio.org" target="_blank">membres&iacute;a vigente de SMIO</a>. A trav&eacute;s de la <strong>alianza ALIO</strong>, miembros de otras sociedades latinoamericanas de IO pueden obtener membres&iacute;a SMIO a un precio preferencial.</p>
+
+      <div class="card-grid">
+        <div class="card" style="border-top: 4px solid var(--teal);">
+          <span class="tag tag-teal">Categor&iacute;a Licenciatura</span>
+          <h3 style="margin-top:0.8rem;">Para estudiantes</h3>
+          <p>Equipos de hasta <strong>3 estudiantes de licenciatura activos</strong> m&aacute;s <strong>1 gu&iacute;a</strong> (definido como cualquier persona que no sea estudiante de licenciatura activo, por ejemplo, un estudiante de posgrado, profesor o profesional de la industria).</p>
+          <p>Esta categor&iacute;a se alinea con la misi&oacute;n educativa de SMIO y fomenta la mentor&iacute;a en la comunidad de IO.</p>
+        </div>
+        <div class="card" style="border-top: 4px solid var(--orange);">
+          <span class="tag tag-orange">Categor&iacute;a Abierta</span>
+          <h3 style="margin-top:0.8rem;">Para todos</h3>
+          <p>Equipos de hasta <strong>3 participantes</strong>, sin restricciones de perfil. Abierta a estudiantes, investigadores y profesionales de la industria.</p>
+          <p>Esta categor&iacute;a maximiza la calidad de las soluciones y abre la competencia a la comunidad de IO en general.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Sistema de puntuaci&oacute;n</h2>
+
+      <h3>L&iacute;nea base de Hexaly</h3>
+      <p>
+        Antes de la apertura, <strong>Hexaly Optimizer</strong> se ejecuta en las 30 instancias para producir una soluci&oacute;n de referencia para cada una. Estas soluciones se publican como referencia pero <strong>no participan en el tablero de posiciones</strong>. El tablero registra &uacute;nicamente soluciones enviadas por los equipos participantes.
+      </p>
+      <p>
+        Al final de la competencia, los resultados se presentan junto a la l&iacute;nea base de Hexaly, proporcionando una comparaci&oacute;n clara para cada instancia. Esto preserva la narrativa de la comunidad compar&aacute;ndose contra un solver industrial poderoso, asegurando al mismo tiempo que la competencia siempre tenga un ganador bien definido.
+      </p>
+
+      <h3>Puntuaci&oacute;n por tiempo de liderazgo</h3>
+      <p>
+        El sistema de puntuaci&oacute;n premia a los equipos que encuentran buenas soluciones <strong>temprano</strong> y las <strong>mantienen</strong>. Para cada instancia, el equipo que posee la mejor soluci&oacute;n entre participantes acumula puntos por cada d&iacute;a calendario que la mantiene. Se otorga un bono por mantener la mejor soluci&oacute;n al cierre de la competencia.
+      </p>
+      <div class="callout">
+        <p><strong>Puntuaci&oacute;n</strong> = (d&iacute;as manteniendo la mejor soluci&oacute;n en todas las instancias) + B &times; (n&uacute;mero de instancias donde mantienes la mejor soluci&oacute;n final)</p>
+        <p>El valor del bono B se anunciar&aacute; con las reglas completas de la competencia.</p>
+      </div>
+      <p>El equipo con la puntuaci&oacute;n total m&aacute;s alta gana en cada categor&iacute;a.</p>
+
+      <h3>Tableros de posiciones</h3>
+      <p>Se mantendr&aacute;n tres vistas p&uacute;blicas durante la competencia:</p>
+      <table class="styled-table">
+        <thead>
+          <tr><th>Tablero</th><th>Descripci&oacute;n</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Por instancia</strong></td><td>Evoluci&oacute;n cronol&oacute;gica de la mejor soluci&oacute;n de participantes para cada instancia (equipo, costo, marca de tiempo).</td></tr>
+          <tr><td><strong>Ranking global</strong></td><td>Puntuaci&oacute;n agregada de cada equipo, actualizada en tiempo real.</td></tr>
+          <tr><td><strong>Comparaci&oacute;n con Hexaly</strong></td><td>Para cada instancia, el costo de la l&iacute;nea base de Hexaly junto a la mejor soluci&oacute;n de participantes, con la brecha porcentual.</td></tr>
+        </tbody>
+      </table>
+      <p>Las soluciones que establecen un nuevo mejor valor se registran pero <strong>no se publican</strong> hasta que la competencia termina, evitando que los equipos mejoren localmente las soluciones de otros.</p>
+    </section>
+
+    <section>
+      <h2>Reglas</h2>
+      <div style="display:flex; flex-direction:column; gap:0.8rem;">
+        <div class="callout">
+          <p><strong>Sin restricciones de hardware.</strong> Los equipos pueden usar cualquier recurso computacional disponible.</p>
+        </div>
+        <div class="callout">
+          <p><strong>Cualquier software est&aacute; permitido.</strong> Solvers comerciales, herramientas de c&oacute;digo abierto o implementaciones propias. Hexaly proporciona licencias acad&eacute;micas gratuitas a todos los participantes registrados.</p>
+        </div>
+        <div class="callout">
+          <p><strong>Membres&iacute;a SMIO requerida.</strong> Cada participante debe ser miembro vigente de SMIO. A trav&eacute;s de la alianza ALIO, miembros de otras sociedades nacionales pueden obtener membres&iacute;a SMIO a precio preferencial.</p>
+        </div>
+        <div class="callout">
+          <p><strong>Un equipo por persona.</strong> Cada persona puede pertenecer a un solo equipo.</p>
+        </div>
+        <div class="callout">
+          <p><strong>Env&iacute;os oficiales &uacute;nicamente.</strong> Las soluciones deben enviarse a trav&eacute;s de la plataforma web. No se aceptan env&iacute;os manuales o por correo electr&oacute;nico.</p>
+        </div>
+        <div class="callout">
+          <p><strong>Resultados p&uacute;blicos.</strong> Al participar, los equipos aceptan que sus soluciones finales (pero no su c&oacute;digo) puedan publicarse como parte de una biblioteca de benchmarks post-competencia.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logos">
+        <img src="../assets/smio_logo.png" alt="SMIO">
+        <img src="../assets/csmio_logo.png" alt="CSMIO 2026">
+        <img src="../assets/hexaly-logo-white.svg" alt="Hexaly" style="height:28px;">
+      </div>
+      <div>
+        <a href="http://www.smio.org" target="_blank">smio.org</a> &middot;
+        <a href="mailto:smio.mexico@gmail.com">smio.mexico@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

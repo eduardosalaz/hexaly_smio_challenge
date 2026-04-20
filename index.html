@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMIO-Hexaly Location Routing Challenge | Monterrey 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .lang-hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, #1a3a4a 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .lang-hero::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -15%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(15,164,160,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .lang-inner { position: relative; z-index: 1; max-width: 700px; }
+    .lang-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .lang-logos img { height: 70px; }
+    .lang-inner h1 { color: var(--white); font-size: 2.8rem; margin-bottom: 0.3em; }
+    .lang-inner .accent { color: var(--teal-light); }
+    .lang-subtitle {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 3rem;
+    }
+    .lang-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .lang-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1.5rem 3rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: all 0.25s;
+    }
+    .lang-btn-en {
+      background: var(--teal);
+      color: var(--white);
+    }
+    .lang-btn-en:hover {
+      background: var(--teal-dark);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(15,164,160,0.3);
+    }
+    .lang-btn-es {
+      background: var(--orange);
+      color: var(--white);
+    }
+    .lang-btn-es:hover {
+      background: var(--orange-light);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(212,101,42,0.3);
+    }
+    .lang-btn span { font-size: 0.85rem; font-weight: 400; opacity: 0.85; }
+  </style>
+</head>
+<body>
+  <div class="lang-hero">
+    <div class="lang-inner">
+      <div class="lang-logos">
+        <img src="assets/smio_logo.png" alt="SMIO">
+        <img src="assets/csmio_logo.png" alt="XIV CSMIO Monterrey">
+        <img src="assets/hexaly-logo-white.svg" alt="Hexaly" style="height:40px;">
+      </div>
+      <h1>SMIO&ndash;Hexaly<br><span class="accent">Location Routing Challenge</span></h1>
+      <p class="lang-subtitle">Monterrey 2026</p>
+      <div class="lang-buttons">
+        <a href="en/index.html" class="lang-btn lang-btn-en">
+          English
+          <span>View in English</span>
+        </a>
+        <a href="es/index.html" class="lang-btn lang-btn-es">
+          Espa&ntilde;ol
+          <span>Ver en espa&ntilde;ol</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
