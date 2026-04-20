@@ -3,154 +3,294 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Problem | SMIO-Hexaly Challenge 2026</title>
+  <title>The Problem · SMIO × Hexaly Challenge 2026</title>
+  <meta name="description" content="A community optimization competition organized by SMIO with Hexaly as Diamond partner. Benchmark your methods on 30 CLRP instances and present your results at XIV CSMIO 2026 in Monterrey.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SMIO × Hexaly · Location Routing Challenge 2026">
+  <meta property="og:description" content="A community optimization competition in partnership with Hexaly. Benchmark your methods on 30 CLRP instances — leaderboard goes live July 2026, winners present at XIV CSMIO in Monterrey.">
+  <meta property="og:image" content="https://challenge.smio.org/assets/og-card.png">
+  <meta property="og:url" content="https://challenge.smio.org/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
   <nav class="nav">
     <div class="nav-inner">
-      <a href="index.html" class="nav-brand">
-        <img src="../assets/smio_logo.png" alt="SMIO">
-        Challenge 2026
-      </a>
-      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+      <a href="index.html" class="nav-brand"><img src="../assets/smio_logo.png" alt="SMIO"><img src="../assets/csmio_logo.png" alt="CSMIO"><span class="nav-brand-div"></span><img src="../assets/hexaly-logo-orange.svg" alt="Hexaly" class="nav-brand-hex"></a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">≡</button>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Overview</a></li>
         <li><a href="problem.html" class="active">Problem</a></li>
         <li><a href="competition.html">Competition</a></li>
         <li><a href="timeline.html">Timeline</a></li>
         <li><a href="prizes.html">Prizes</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="../es/problem.html" style="border:1px solid rgba(255,255,255,0.3); border-radius:4px; padding:0.3rem 0.6rem; font-size:0.82rem;">ES</a></li>
+        <li><a href="../es/problem.html" class="nav-lang">ES</a></li>
+        <li><a href="register.html" class="nav-cta">Register →</a></li>
       </ul>
     </div>
   </nav>
 
+  <!-- PAGE HEADER -->
   <header class="page-header">
-    <div class="page-header-inner">
-      <h1>The Problem</h1>
-      <p>Capacitated Location Routing Problem (CLRP) &mdash; combining facility location with vehicle routing.</p>
+    <div class="nodeplot" data-nodemap data-seed="11" data-nodes="140" data-depots="4"
+         data-edge="rgba(26,30,60,0.18)" data-node="rgba(26,30,60,0.45)" data-depot="#E8793F" data-paper="#FDFBF7"></div>
+    <div class="wrap">
+      <div class="page-header-inner">
+        <div>
+          <div class="eyebrow">Problem · 01 / 05</div>
+          <h1 style="margin-top: 0.8rem;">Capacitated<br>Location Routing.</h1>
+        </div>
+        <p class="page-header-desc">A two-layer decision problem: strategic facility siting combined with operational vehicle routing. Minimize depot opening cost + fleet cost + total travel distance — subject to capacity and assignment constraints.</p>
+      </div>
     </div>
   </header>
 
-  <div class="content">
-
-    <section>
-      <h2>Overview</h2>
-      <p>
-        The <strong>Capacitated Location Routing Problem (CLRP)</strong> is an optimization problem that combines two layers of decision-making: <strong>strategic</strong> decisions about where to open depots and <strong>operational</strong> decisions about how to route vehicles from those depots to serve customers.
-      </p>
-      <p>
-        Given a set of potential depot locations (each with an opening cost, a capacity limit, and a maximum number of vehicles) and a set of customers with known demands, the goal is to simultaneously decide which depots to open, assign customers to open depots, and design vehicle routes that minimize the total cost. The total cost includes depot opening costs, a fixed cost per dispatched vehicle, and the total travel distance.
-      </p>
-    </section>
-
-    <section>
-      <h2>Key Decisions</h2>
-      <div class="card-grid">
-        <div class="card">
-          <div class="card-icon" style="background:linear-gradient(135deg, var(--navy), var(--navy-light));">&#127970;</div>
-          <h3>Depot Opening</h3>
-          <p>Which depots to open from a set of potential locations. Each depot has an opening cost, a capacity (maximum total demand it can serve), and a limit on the number of vehicles it can accommodate.</p>
+  <!-- OVERVIEW -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">§ Overview</div>
+          <h2>Two layers of decision-making, jointly.</h2>
         </div>
-        <div class="card">
-          <div class="card-icon" style="background:linear-gradient(135deg, var(--orange), var(--orange-light));">&#128666;</div>
-          <h3>Vehicle Routing</h3>
-          <p>For each open depot, design routes for a fleet of identical vehicles. Each route starts and ends at its depot, and the total demand on a route cannot exceed the vehicle capacity.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">&#128205;</div>
-          <h3>Customer Assignment</h3>
-          <p>Every customer must be assigned to exactly one open depot and visited by exactly one route from that depot. No customer can be split across depots or routes.</p>
+        <div class="prose">
+          <p>The <strong>Capacitated Location Routing Problem (CLRP)</strong> is an optimization problem that combines two layers of decision-making: <strong>strategic</strong> decisions about where to open depots and <strong>operational</strong> decisions about how to route vehicles from those depots to serve customers.</p>
+          <p>Given a set of potential depot locations (each with an opening cost, a capacity limit, and a maximum number of vehicles) and a set of customers with known demands, the goal is to simultaneously decide which depots to open, assign customers to open depots, and design vehicle routes that minimize the total cost.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <h2>Constraints</h2>
-      <p>A feasible solution must satisfy all of the following:</p>
-      <table class="styled-table">
+  <!-- THREE DECISIONS -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">§ Three decisions</div>
+          <h2>Open depots.<br>Assign customers.<br>Design routes.</h2>
+        </div>
+        <p class="section-intro">These three decisions are tightly coupled. Solving them independently is feasible but far from optimal — the central challenge is exploiting their interaction.</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-num">DECISION 01</div>
+          <h3>Depot opening</h3>
+          <p>Which depots to open from a set of potential locations. Each depot has an opening cost f<sub>i</sub>, a capacity W<sub>i</sub> (maximum total demand), and a limit on the number of vehicles it can accommodate.</p>
+          <span class="tag tag-navy card-tag">Strategic</span>
+        </div>
+        <div class="card">
+          <div class="card-num">DECISION 02</div>
+          <h3>Customer assignment</h3>
+          <p>Every customer must be assigned to exactly one open depot and visited by exactly one route from that depot. No customer can be split across depots or routes.</p>
+          <span class="tag tag-navy card-tag">Tactical</span>
+        </div>
+        <div class="card">
+          <div class="card-num">DECISION 03</div>
+          <h3>Vehicle routing</h3>
+          <p>For each open depot, design routes for a fleet of identical vehicles. Each route starts and ends at its depot; the total demand on a route cannot exceed the vehicle capacity Q.</p>
+          <span class="tag tag-orange card-tag">Operational</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OBJECTIVE / FORMULA -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">§ Objective</div>
+          <h2>Minimize total cost across three components.</h2>
+        </div>
+        <p class="section-intro">A three-part objective captures the trade-off between opening fewer depots (cheaper strategically) and routing efficiency (which may require depots closer to customers).</p>
+      </div>
+
+      <div class="formula" style="margin-bottom: 1.5rem;">
+        <div><span class="c"># objective — minimize total cost</span></div>
+        <div style="margin-top: 0.8rem;">min&nbsp;&nbsp; <span class="k">Σ<sub>i∈D</sub></span> f<sub>i</sub> · y<sub>i</sub>
+          &nbsp;&nbsp;&nbsp;<span class="c">// depot opening costs</span></div>
+        <div>&nbsp;&nbsp;&nbsp;+ <span class="k">Σ<sub>r∈R</sub></span> v · z<sub>r</sub>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">// fixed cost per vehicle dispatched</span></div>
+        <div>&nbsp;&nbsp;&nbsp;+ <span class="k">Σ<sub>(i,j)∈E</sub></span> c<sub>ij</sub> · x<sub>ij</sub>
+          &nbsp;&nbsp;<span class="c">// total travel distance</span></div>
+      </div>
+
+      <div class="spec-list">
+        <div class="spec-row">
+          <div class="spec-k">y<sub>i</sub></div>
+          <div class="spec-v">Binary — 1 if depot <em>i</em> is open, 0 otherwise</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">z<sub>r</sub></div>
+          <div class="spec-v">Binary — 1 if route <em>r</em> is used, 0 otherwise</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">x<sub>ij</sub></div>
+          <div class="spec-v">Binary — 1 if edge (i, j) is traversed on some route, 0 otherwise</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">f<sub>i</sub>, v, c<sub>ij</sub></div>
+          <div class="spec-v">Depot opening cost, fixed vehicle cost, travel cost for edge (i, j)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSTRAINTS -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">§ Constraints</div>
+          <h2>A feasible solution must satisfy…</h2>
+        </div>
+        <p class="section-intro">Five constraint families define feasibility. Capacity tightness is a tuning dimension of the instance set — some instances will leave little slack.</p>
+      </div>
+
+      <div class="table-wrap">
+      <table class="tbl">
         <thead>
-          <tr><th>Constraint</th><th>Description</th></tr>
+          <tr><th style="width: 230px;">Constraint</th><th>Description</th></tr>
         </thead>
         <tbody>
           <tr><td><strong>Customer service</strong></td><td>Every customer is visited exactly once by exactly one route.</td></tr>
           <tr><td><strong>Depot assignment</strong></td><td>Each route operates from exactly one open depot. All customers on a route are assigned to that depot.</td></tr>
           <tr><td><strong>Vehicle capacity</strong></td><td>The total demand of customers on any single route does not exceed the vehicle capacity Q.</td></tr>
-          <tr><td><strong>Depot capacity</strong></td><td>The total demand assigned to a depot does not exceed its capacity.</td></tr>
-          <tr><td><strong>Vehicle limit</strong></td><td>The number of routes operating from a depot does not exceed its maximum number of vehicles.</td></tr>
+          <tr><td><strong>Depot capacity</strong></td><td>The total demand assigned to a depot does not exceed its capacity W<sub>i</sub>.</td></tr>
+          <tr><td><strong>Vehicle limit</strong></td><td>The number of routes operating from a depot does not exceed its maximum number of vehicles m<sub>i</sub>.</td></tr>
         </tbody>
       </table>
-    </section>
-
-    <section>
-      <h2>Objective</h2>
-      <p>Minimize the total cost, which consists of three components:</p>
-      <div class="callout">
-        <p><strong>Total cost</strong> = (depot opening costs) + (fixed cost per route dispatched) + (total travel distance of all routes)</p>
       </div>
-      <p>
-        This three-part objective captures the trade-off between opening fewer depots (cheaper strategically) and routing efficiency (which may require more depots closer to customers).
-      </p>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <h2>Industrial Relevance</h2>
-      <p>
-        The CLRP is directly relevant to Mexican industry. Companies such as <strong>OXXO</strong>, <strong>Bimbo</strong>, and <strong>FEMSA</strong> routinely face decisions about where to place distribution centers while simultaneously optimizing delivery routes. This problem captures the essence of those real-world decisions.
-      </p>
-      <p>
-        From an algorithmic perspective, the CLRP sits at a difficulty sweet spot: it combines strategic facility location with operational routing, so no single algorithmic paradigm dominates. The competition is open to teams using metaheuristics, decomposition methods, branch-and-price, matheuristics, machine learning, or hybrid approaches.
-      </p>
-      <p>
-        Compared to the well-studied CVRP, there is significantly less benchmark saturation for the LRP. This challenge fills a genuine gap, and any results carry higher novelty for the community.
-      </p>
-    </section>
-
-    <section>
-      <h2>Technical Specification</h2>
-      <div class="callout callout-orange">
-        <h3>Coming Soon</h3>
-        <p>The full technical specification &mdash; including the mathematical formulation, instance file format, solution file format, and the solution verifier &mdash; will be published alongside the instance generator in <strong>June 2026</strong>. A sample instance with a feasible solution will also be provided at that time.</p>
+  <!-- INDUSTRIAL RELEVANCE -->
+  <section class="section">
+    <div class="wrap">
+      <div class="grid-2" style="align-items: start; gap: 4rem;">
+        <div>
+          <div class="eyebrow">§ Why this problem</div>
+          <h2 style="margin-top: 1rem;">Real relevance.<br>Room to innovate.</h2>
+          <div class="prose" style="margin-top: 1.5rem;">
+            <p>The CLRP is directly relevant to Mexican industry. Companies such as <strong>OXXO</strong>, <strong>Bimbo</strong>, and <strong>FEMSA</strong> routinely face decisions about where to place distribution centers while simultaneously optimizing delivery routes. This problem captures the essence of those real-world decisions.</p>
+            <p>From an algorithmic perspective, the CLRP sits at a difficulty sweet spot: it combines strategic facility location with operational routing, so no single algorithmic paradigm dominates. The competition is open to metaheuristics, decomposition methods, branch-and-price, matheuristics, machine learning, and hybrid approaches.</p>
+            <p>Compared to the well-studied CVRP, there is significantly less benchmark saturation for the LRP. This challenge fills a genuine gap — any results carry higher novelty for the community.</p>
+          </div>
+        </div>
+        <div>
+          <div style="border: 1px solid var(--rule); aspect-ratio: 4/5; background: var(--paper-2); position: relative; overflow: hidden;">
+            <div data-nodemap data-seed="9" data-nodes="200" data-depots="6" style="position: absolute; inset: 0;"
+                 data-edge="rgba(26,30,60,0.3)" data-node="rgba(26,30,60,0.6)" data-depot="#E8793F" data-paper="#F7F4EE"></div>
+            <div style="position: absolute; bottom: 1rem; left: 1rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-3); letter-spacing: 0.08em; text-transform: uppercase;">
+              FIG 01 · Instance with 200 customers, 6 depots
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <h2>Instance Design</h2>
-      <p>The challenge will feature <strong>30 instances</strong> generated by an open-source Python generator, covering:</p>
-      <table class="styled-table">
-        <thead>
-          <tr><th>Dimension</th><th>Range</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Customers</td><td>200 &ndash; 3,000</td></tr>
-          <tr><td>Depots</td><td>10 &ndash; 50</td></tr>
-          <tr><td>Distance type</td><td>Euclidean symmetric (small/medium) and asymmetric (large)</td></tr>
-        </tbody>
-      </table>
-      <p>
-        Instances will vary across customer distribution patterns (uniform, clustered, mixed), depot positioning strategies, demand distributions, and capacity tightness levels to prevent over-specialization.
-      </p>
-    </section>
+  <!-- INSTANCE DESIGN -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">§ Instance design</div>
+          <h2>30 instances,<br>three scales, zero overlap.</h2>
+        </div>
+        <p class="section-intro">Instances are generated by an open-source Python generator released in June 2026. Variation across dimensions prevents over-specialization.</p>
+      </div>
 
-  </div>
+      <div class="spec-list">
+        <div class="spec-row">
+          <div class="spec-k">customers</div>
+          <div class="spec-v">200 – 3,000</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">depots</div>
+          <div class="spec-v">10 – 50</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">distance</div>
+          <div class="spec-v">Euclidean symmetric (small / medium scales) and asymmetric (large scale)</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">distribution</div>
+          <div class="spec-v">Uniform, clustered, or mixed customer-placement patterns</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">capacity</div>
+          <div class="spec-v">Multiple tightness levels — from loose to near-infeasible</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">demand</div>
+          <div class="spec-v">Multiple distributions, controlling variance and skew</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- SPEC COMING SOON -->
+  <section class="section" style="border-bottom: 0;">
+    <div class="wrap">
+      <div class="callout" style="border-left: 3px solid var(--orange);">
+        <span class="callout-n">NOTE</span>
+        <div>
+          <h3>Full technical specification — coming June 2026</h3>
+          <p>The mathematical formulation, instance file format, solution file format, and the solution verifier will be published alongside the instance generator in June 2026. A sample instance with a feasible solution will also be provided at that time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-logos">
-        <img src="../assets/smio_logo.png" alt="SMIO">
-        <img src="../assets/csmio_logo.png" alt="CSMIO 2026">
-        <img src="../assets/hexaly-logo-white.svg" alt="Hexaly" style="height:28px;">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <div style="font-family: var(--font-sans); font-size: 1.1rem; color: var(--paper); margin-bottom: 0.8rem; font-weight: 500; letter-spacing: -0.02em;">SMIO × Hexaly<br>Location Routing Challenge 2026</div>
+          <p style="color: oklch(0.65 0.01 80); font-size: 0.88rem;">A community-driven optimization competition, hosted by the Mexican Society of Operations Research.</p>
+        </div>
+        <div>
+          <h4>Challenge</h4>
+          <a href="index.html">Overview</a>
+          <a href="problem.html">Problem</a>
+          <a href="competition.html">Competition</a>
+          <a href="timeline.html">Timeline</a>
+          <a href="prizes.html">Prizes</a>
+          <a href="register.html">Register</a>
+        </div>
+        <div>
+          <h4>Organizations</h4>
+          <a href="https://www.smio.org" target="_blank">smio.org</a>
+          <a href="https://csmio2026.my.canva.site/" target="_blank">csmio2026.my.canva.site</a>
+          <a href="https://www.hexaly.com" target="_blank">hexaly.com</a>
+          <a href="mailto:smio.mexico@gmail.com">smio.mexico@gmail.com</a>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <a href="https://www.linkedin.com/company/sociedad-mexicana-de-investigaci%C3%B3n-de-operaciones" target="_blank">LinkedIn</a>
+          <a href="https://www.instagram.com/smio.mexico" target="_blank">Instagram</a>
+          <a href="https://www.youtube.com/@smio.mexico" target="_blank">YouTube</a>
+        </div>
       </div>
-      <div>
-        <a href="http://www.smio.org" target="_blank">smio.org</a> &middot;
-        <a href="mailto:smio.mexico@gmail.com">smio.mexico@gmail.com</a>
+      <div class="footer-bottom">
+        <div class="footer-logos">
+          <img src="../assets/smio_logo.png" alt="SMIO">
+          <img src="../assets/csmio_logo.png" alt="CSMIO 2026">
+          <img src="../assets/hexaly-logo-white.svg" alt="Hexaly" class="hexaly-mark">
+        </div>
+        <div>© 2026 · CSMIO Monterrey · Oct 7–9</div>
       </div>
     </div>
   </footer>
 
+  <script src="../shared/nodemap.js"></script>
 </body>
 </html>

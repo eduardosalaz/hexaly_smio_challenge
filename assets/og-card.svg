@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <style>
+      .bg { fill: #FDFBF7; }
+      .orange { fill: #E8793F; }
+      .ink { fill: #1A1E3C; }
+      .ink-2 { fill: #3A3F66; }
+      .ink-3 { fill: #6B7095; }
+      .rule { stroke: #D8D1BE; stroke-width: 1; }
+      .edge { stroke: #1A1E3C; stroke-opacity: 0.22; stroke-width: 1.2; fill: none; }
+      .node { fill: #1A1E3C; fill-opacity: 0.45; }
+      .depot { fill: #E8793F; }
+      .depot-ring { fill: none; stroke: #E8793F; stroke-width: 2; }
+      .title { font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 600; letter-spacing: -0.03em; fill: #1A1E3C; }
+      .accent { font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 400; font-style: italic; fill: #E8793F; letter-spacing: -0.03em; }
+      .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; }
+      .sub { font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 400; fill: #3A3F66; }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="630" class="bg"/>
+
+  <!-- decorative nodemap on right side -->
+  <g transform="translate(720,0)">
+    <!-- edges -->
+    <path class="edge" d="M 140 200 L 80 120 M 140 200 L 220 80 M 140 200 L 260 180 M 140 200 L 200 330 M 140 200 L 60 280"/>
+    <path class="edge" d="M 380 420 L 300 360 M 380 420 L 460 340 M 380 420 L 440 510 M 380 420 L 300 500 M 380 420 L 260 440"/>
+    <path class="edge" d="M 120 520 L 60 440 M 120 520 L 200 580 M 120 520 L 40 560"/>
+    <!-- regular nodes -->
+    <circle class="node" cx="80" cy="120" r="3"/>
+    <circle class="node" cx="220" cy="80" r="3"/>
+    <circle class="node" cx="260" cy="180" r="3"/>
+    <circle class="node" cx="200" cy="330" r="3"/>
+    <circle class="node" cx="60" cy="280" r="3"/>
+    <circle class="node" cx="300" cy="360" r="3"/>
+    <circle class="node" cx="460" cy="340" r="3"/>
+    <circle class="node" cx="440" cy="510" r="3"/>
+    <circle class="node" cx="300" cy="500" r="3"/>
+    <circle class="node" cx="260" cy="440" r="3"/>
+    <circle class="node" cx="60" cy="440" r="3"/>
+    <circle class="node" cx="200" cy="580" r="3"/>
+    <circle class="node" cx="40" cy="560" r="3"/>
+    <!-- depots -->
+    <circle class="depot-ring" cx="140" cy="200" r="14"/>
+    <circle class="depot" cx="140" cy="200" r="5"/>
+    <circle class="depot-ring" cx="380" cy="420" r="14"/>
+    <circle class="depot" cx="380" cy="420" r="5"/>
+    <circle class="depot-ring" cx="120" cy="520" r="14"/>
+    <circle class="depot" cx="120" cy="520" r="5"/>
+  </g>
+
+  <!-- left content -->
+  <g transform="translate(72,80)">
+    <!-- eyebrow -->
+    <text x="0" y="30" class="mono" font-size="18" fill="#6B7095">SMIO × HEXALY · EDITION 01 / 2026</text>
+
+    <!-- title -->
+    <text x="0" y="150" class="title" font-size="88">Location</text>
+    <text x="0" y="245" class="title" font-size="88">Routing <tspan class="accent">Challenge</tspan>.</text>
+
+    <!-- subtitle -->
+    <text x="0" y="320" class="sub" font-size="26">A community optimization competition on the CLRP —</text>
+    <text x="0" y="355" class="sub" font-size="26">30 instances, two tracks, and a stage at CSMIO 2026.</text>
+
+    <!-- divider -->
+    <line x1="0" y1="410" x2="720" y2="410" class="rule"/>
+
+    <!-- footer row: logos text -->
+    <text x="0" y="455" class="mono" font-size="16" fill="#6B7095">ORGANIZED BY</text>
+    <text x="0" y="485" class="sub" font-size="20" fill="#1A1E3C" font-weight="600">SMIO · XIV CSMIO Monterrey</text>
+
+    <text x="360" y="455" class="mono" font-size="16" fill="#6B7095">DIAMOND SPONSOR</text>
+    <text x="360" y="485" class="sub" font-size="20" fill="#E8793F" font-weight="700">Hexaly</text>
+
+    <!-- date pin -->
+    <g transform="translate(0,510)">
+      <circle cx="8" cy="8" r="5" class="depot"/>
+      <text x="24" y="14" class="mono" font-size="14" fill="#1A1E3C">MONTERREY · OCT 7–9, 2026</text>
+    </g>
+  </g>
+</svg>

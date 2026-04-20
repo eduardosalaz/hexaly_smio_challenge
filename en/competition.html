@@ -3,87 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Competition | SMIO-Hexaly Challenge 2026</title>
+  <title>Competition · SMIO × Hexaly Challenge 2026</title>
+  <meta name="description" content="A community optimization competition organized by SMIO with Hexaly as Diamond partner. Benchmark your methods on 30 CLRP instances and present your results at XIV CSMIO 2026 in Monterrey.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SMIO × Hexaly · Location Routing Challenge 2026">
+  <meta property="og:description" content="A community optimization competition in partnership with Hexaly. Benchmark your methods on 30 CLRP instances — leaderboard goes live July 2026, winners present at XIV CSMIO in Monterrey.">
+  <meta property="og:image" content="https://challenge.smio.org/assets/og-card.png">
+  <meta property="og:url" content="https://challenge.smio.org/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-
   <nav class="nav">
     <div class="nav-inner">
-      <a href="index.html" class="nav-brand">
-        <img src="../assets/smio_logo.png" alt="SMIO">
-        Challenge 2026
-      </a>
-      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+      <a href="index.html" class="nav-brand"><img src="../assets/smio_logo.png" alt="SMIO"><img src="../assets/csmio_logo.png" alt="CSMIO"><span class="nav-brand-div"></span><img src="../assets/hexaly-logo-orange.svg" alt="Hexaly" class="nav-brand-hex"></a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">≡</button>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Overview</a></li>
         <li><a href="problem.html">Problem</a></li>
         <li><a href="competition.html" class="active">Competition</a></li>
         <li><a href="timeline.html">Timeline</a></li>
         <li><a href="prizes.html">Prizes</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="../es/competition.html" style="border:1px solid rgba(255,255,255,0.3); border-radius:4px; padding:0.3rem 0.6rem; font-size:0.82rem;">ES</a></li>
+        <li><a href="../es/competition.html" class="nav-lang">ES</a></li>
+        <li><a href="register.html" class="nav-cta">Register →</a></li>
       </ul>
     </div>
   </nav>
 
   <header class="page-header">
-    <div class="page-header-inner">
-      <h1>Competition Format</h1>
-      <p>Two tracks, one leaderboard, and a clear path to CSMIO 2026 in Monterrey.</p>
+    <div class="nodeplot" data-nodemap data-seed="22" data-nodes="140" data-depots="4"
+         data-edge="rgba(26,30,60,0.18)" data-node="rgba(26,30,60,0.45)" data-depot="#E8793F" data-paper="#FDFBF7"></div>
+    <div class="wrap">
+      <div class="page-header-inner">
+        <div>
+          <div class="eyebrow">Competition · 02 / 05</div>
+          <h1 style="margin-top: 0.8rem;">Two tracks.<br>One leaderboard.</h1>
+        </div>
+        <p class="page-header-desc">Lead-time scoring rewards teams that find good solutions early and hold them. A public leaderboard updates in real time. Hexaly Optimizer produces the baseline — and doesn't compete.</p>
+      </div>
     </div>
   </header>
 
-  <div class="content">
-
-    <section>
-      <h2>Tracks</h2>
-      <p>The challenge features two tracks. All participants in both tracks must hold a current <a href="http://www.smio.org" target="_blank">SMIO membership</a>. Through the <strong>ALIO alliance</strong>, members of other Latin American OR societies can obtain SMIO membership at a discounted rate.</p>
-
-      <div class="card-grid">
-        <div class="card" style="border-top: 4px solid var(--teal);">
-          <span class="tag tag-teal">Undergraduate Track</span>
-          <h3 style="margin-top:0.8rem;">For Students</h3>
-          <p>Teams of up to <strong>3 current undergraduate students</strong> plus <strong>1 guide</strong> (defined as anyone who is not a current undergraduate student &mdash; e.g., a graduate student, professor, or industry professional).</p>
-          <p>This track aligns with SMIO's educational mission and encourages mentorship in the OR community.</p>
+  <!-- TRACKS -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">§ Tracks</div>
+          <h2>Two tracks, same problem set.</h2>
         </div>
-        <div class="card" style="border-top: 4px solid var(--orange);">
-          <span class="tag tag-orange">Open Track</span>
-          <h3 style="margin-top:0.8rem;">For Everyone</h3>
-          <p>Teams of up to <strong>3 participants</strong>, no restrictions on profile. Open to students, researchers, and industry professionals.</p>
-          <p>This track maximizes the quality of solutions and opens the competition to the broader OR community.</p>
+        <p class="section-intro">All participants must hold a current <a href="https://www.smio.org" target="_blank" style="color: var(--orange); border-bottom: 1px solid currentColor;">SMIO membership</a>. Through the ALIO alliance, members of other Latin American OR societies can obtain SMIO membership at a discounted rate.</p>
+      </div>
+
+      <div class="grid-2">
+        <div style="border: 1px solid var(--rule); background: var(--paper); padding: 2.2rem; display: flex; flex-direction: column; gap: 0.6rem;">
+          <span class="tag tag-teal" style="align-self: flex-start;">Undergraduate</span>
+          <h3 style="font-size: 1.6rem; margin-top: 0.6rem; font-weight: 500;">For students</h3>
+          <p style="color: var(--ink-2);">Teams of up to <strong>3 current undergraduate students</strong> plus <strong>1 guide</strong> — defined as anyone who is not a current undergraduate student (graduate student, professor, or industry professional).</p>
+          <p style="color: var(--ink-3); font-size: 0.92rem; margin-top: 0.5rem;">Aligns with SMIO's educational mission and encourages mentorship in the OR community.</p>
+        </div>
+        <div style="border: 1px solid var(--rule); background: var(--paper); padding: 2.2rem; display: flex; flex-direction: column; gap: 0.6rem;">
+          <span class="tag tag-orange" style="align-self: flex-start;">Open</span>
+          <h3 style="font-size: 1.6rem; margin-top: 0.6rem; font-weight: 500;">For everyone</h3>
+          <p style="color: var(--ink-2);">Teams of up to <strong>3 participants</strong>, no restrictions on profile. Open to students, researchers, and industry professionals.</p>
+          <p style="color: var(--ink-3); font-size: 0.92rem; margin-top: 0.5rem;">Maximizes solution quality and opens the competition to the broader OR community.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <h2>Scoring System</h2>
-
-      <h3>Hexaly Baseline</h3>
-      <p>
-        Before the competition opens, <strong>Hexaly Optimizer</strong> runs on all 30 instances to produce a baseline solution for each one. These baselines are published as a reference but <strong>do not participate in the leaderboard</strong>. The leaderboard tracks only solutions submitted by participant teams.
-      </p>
-      <p>
-        At the end of the competition, results are presented alongside the Hexaly baseline, providing a clear comparison for each instance. This preserves the narrative of the community benchmarking against a strong industrial solver while ensuring the competition always has a well-defined winner.
-      </p>
-
-      <h3>Lead-Time Scoring</h3>
-      <p>
-        The scoring system rewards teams that find good solutions <strong>early</strong> and <strong>hold</strong> them. For each instance, the team holding the best participant solution accumulates points for every calendar day they maintain it. A bonus is awarded for holding the best solution at the close of the competition.
-      </p>
-      <div class="callout">
-        <p><strong>Score</strong> = (days holding the best solution across all instances) + B &times; (number of instances where you hold the final best solution)</p>
-        <p>The bonus value B will be announced with the full competition rules.</p>
+  <!-- SCORING -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">§ Scoring</div>
+          <h2>Lead-time scoring.<br>Early and sustained.</h2>
+        </div>
+        <p class="section-intro">For each instance, the team holding the best participant solution accumulates points every calendar day they maintain it. A bonus is awarded for holding the best solution at the close of the competition.</p>
       </div>
-      <p>The team with the highest total score wins in each track.</p>
 
-      <h3>Leaderboards</h3>
-      <p>Three public views will be maintained during the competition:</p>
-      <table class="styled-table">
+      <div class="formula" style="margin-bottom: 2rem;">
+        <div><span class="c"># team score</span></div>
+        <div style="margin-top: 0.8rem;">score<sub>team</sub> &nbsp;=&nbsp; <span class="k">Σ<sub>i∈I</sub></span> days<sub>i</sub>(team)
+          &nbsp;&nbsp;&nbsp;<span class="c">// days holding best on instance i</span></div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ B · <span class="k">|{ i : final<sub>i</sub>(team) }|</span>
+          &nbsp;&nbsp;<span class="c">// bonus for final-best instances</span></div>
+      </div>
+
+      <div class="prose">
+        <p>The bonus value <code style="font-family: var(--font-mono); background: var(--paper); padding: 0.1rem 0.4rem; border: 1px solid var(--rule);">B</code> will be announced with the full competition rules. The team with the highest total score wins in each track.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEXALY BASELINE -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">§ Hexaly baseline</div>
+          <h2>A reference, not a competitor.</h2>
+        </div>
+        <p class="section-intro">Before the competition opens, Hexaly Optimizer runs on all 30 instances to produce a baseline solution for each one. These baselines are published as a reference but do not participate in the leaderboard.</p>
+      </div>
+
+      <div class="prose" style="margin-bottom: 2rem;">
+        <p>At the end of the competition, results are presented alongside the Hexaly baseline, providing a clear comparison for each instance. This preserves the narrative of the community benchmarking against a strong industrial solver while ensuring the competition always has a well-defined winner.</p>
+      </div>
+
+      <!-- Leaderboard preview -->
+      <div style="border: 1px solid var(--ink); background: var(--paper); font-family: var(--font-mono); font-size: 0.86rem;">
+        <div style="padding: 0.8rem 1.2rem; border-bottom: 1px solid var(--ink); display: flex; justify-content: space-between; align-items: center; background: var(--paper-2);">
+          <div style="letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.72rem; color: var(--ink-3);">Leaderboard preview · instance lrp-14</div>
+          <div style="display: flex; gap: 0.5rem; align-items: center; font-size: 0.72rem; color: var(--ink-3);">
+            <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--green); display: inline-block;"></span>
+            LIVE
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 40px 1fr 130px 110px; padding: 0.7rem 1.2rem; border-bottom: 1px solid var(--rule); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3);">
+          <div>#</div><div>team</div><div>best cost</div><div>held</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 40px 1fr 130px 110px; padding: 0.8rem 1.2rem; border-bottom: 1px solid var(--rule); align-items: center;">
+          <div style="color: var(--orange); font-weight: 500;">01</div>
+          <div>tec_mty_a</div>
+          <div>128,440.21</div>
+          <div style="color: var(--ink-3);">6d 12h</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 40px 1fr 130px 110px; padding: 0.8rem 1.2rem; border-bottom: 1px solid var(--rule); align-items: center;">
+          <div>02</div>
+          <div>alpha_or</div>
+          <div>129,112.08</div>
+          <div style="color: var(--ink-3);">2d 3h</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 40px 1fr 130px 110px; padding: 0.8rem 1.2rem; border-bottom: 1px solid var(--rule); align-items: center;">
+          <div>03</div>
+          <div>unam_cvrp</div>
+          <div>129,880.55</div>
+          <div style="color: var(--ink-3);">0d 18h</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 40px 1fr 130px 110px; padding: 0.8rem 1.2rem; align-items: center; background: var(--paper-2);">
+          <div style="color: var(--ink-3);">—</div>
+          <div style="color: var(--ink-3);">hexaly · baseline <span style="font-family: var(--font-sans); font-style: italic; margin-left: 0.4rem; color: var(--ink-4);">reference</span></div>
+          <div style="color: var(--ink-3);">131,208.40</div>
+          <div style="color: var(--ink-4);">—</div>
+        </div>
+      </div>
+      <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-4); margin-top: 0.8rem; letter-spacing: 0.04em;">
+        ↑ Illustrative mock. Live leaderboard launches mid-July 2026.
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERBOARDS -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">§ Leaderboards</div>
+          <h2>Three public views.</h2>
+        </div>
+        <p class="section-intro">Solutions that set a new best are recorded but not published until the competition ends — preventing teams from locally improving each other's results.</p>
+      </div>
+
+      <div class="table-wrap">
+      <table class="tbl">
         <thead>
-          <tr><th>Leaderboard</th><th>Description</th></tr>
+          <tr><th style="width: 220px;">Leaderboard</th><th>Description</th></tr>
         </thead>
         <tbody>
           <tr><td><strong>Per-instance</strong></td><td>Chronological evolution of the best participant solution for each instance (team, cost, timestamp).</td></tr>
@@ -91,48 +181,49 @@
           <tr><td><strong>Hexaly comparison</strong></td><td>For each instance, the Hexaly baseline cost alongside the current best participant solution, with the percentage gap.</td></tr>
         </tbody>
       </table>
-      <p>Solutions that set a new best are recorded but <strong>not published</strong> until the competition ends, preventing teams from locally improving each other's results.</p>
-    </section>
-
-    <section>
-      <h2>Rules</h2>
-      <div style="display:flex; flex-direction:column; gap:0.8rem;">
-        <div class="callout">
-          <p><strong>No hardware restrictions.</strong> Teams may use any computational resources available to them.</p>
-        </div>
-        <div class="callout">
-          <p><strong>Any software is allowed.</strong> Commercial solvers, open-source tools, or custom implementations. Hexaly provides free academic licenses to all registered participants.</p>
-        </div>
-        <div class="callout">
-          <p><strong>SMIO membership required.</strong> Every participant must be a valid SMIO member. Through the ALIO alliance, members of other national societies can obtain SMIO membership at a discounted rate.</p>
-        </div>
-        <div class="callout">
-          <p><strong>One team per person.</strong> Each person may belong to only one team.</p>
-        </div>
-        <div class="callout">
-          <p><strong>Official submissions only.</strong> Solutions must be submitted through the web platform. No manual or email submissions.</p>
-        </div>
-        <div class="callout">
-          <p><strong>Results are public.</strong> By participating, teams agree that their final solutions (but not their code) may be published as part of a post-competition benchmark library.</p>
-        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </div>
+  <!-- RULES -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">§ Rules</div>
+          <h2>Six rules. No surprises.</h2>
+        </div>
+        <p class="section-intro">Designed to keep the competition fair, open, and technically unconstrained.</p>
+      </div>
+
+      <div class="callout-row">
+        <div class="callout"><span class="callout-n">01 / HW</span><div><h3>No hardware restrictions</h3><p>Teams may use any computational resources available to them.</p></div></div>
+        <div class="callout"><span class="callout-n">02 / SW</span><div><h3>Any software is allowed</h3><p>Commercial solvers, open-source tools, or custom implementations. Hexaly provides free academic licenses to all registered participants.</p></div></div>
+        <div class="callout"><span class="callout-n">03 / MEMBER</span><div><h3>SMIO membership required</h3><p>Every participant must be a valid SMIO member. Through the ALIO alliance, members of other national societies can obtain SMIO membership at a discounted rate.</p></div></div>
+        <div class="callout"><span class="callout-n">04 / TEAMS</span><div><h3>One team per person</h3><p>Each person may belong to only one team.</p></div></div>
+        <div class="callout"><span class="callout-n">05 / SUBMIT</span><div><h3>Official submissions only</h3><p>Solutions must be submitted through the web platform. No manual or email submissions.</p></div></div>
+        <div class="callout"><span class="callout-n">06 / PUBLIC</span><div><h3>Results are public</h3><p>By participating, teams agree that their final solutions (but not their code) may be published as part of a post-competition benchmark library.</p></div></div>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-logos">
-        <img src="../assets/smio_logo.png" alt="SMIO">
-        <img src="../assets/csmio_logo.png" alt="CSMIO 2026">
-        <img src="../assets/hexaly-logo-white.svg" alt="Hexaly" style="height:28px;">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <div style="font-family: var(--font-sans); font-size: 1.1rem; color: var(--paper); margin-bottom: 0.8rem; font-weight: 500; letter-spacing: -0.02em;">SMIO × Hexaly<br>Location Routing Challenge 2026</div>
+          <p style="color: oklch(0.65 0.01 80); font-size: 0.88rem;">A community-driven optimization competition, hosted by the Mexican Society of Operations Research.</p>
+        </div>
+        <div><h4>Challenge</h4><a href="index.html">Overview</a><a href="problem.html">Problem</a><a href="competition.html">Competition</a><a href="timeline.html">Timeline</a><a href="prizes.html">Prizes</a><a href="register.html">Register</a></div>
+        <div><h4>Organizations</h4><a href="https://www.smio.org" target="_blank">smio.org</a><a href="https://csmio2026.my.canva.site/" target="_blank">csmio2026.my.canva.site</a><a href="https://www.hexaly.com" target="_blank">hexaly.com</a><a href="mailto:smio.mexico@gmail.com">smio.mexico@gmail.com</a></div>
+        <div><h4>Follow</h4><a href="https://www.linkedin.com/company/sociedad-mexicana-de-investigaci%C3%B3n-de-operaciones" target="_blank">LinkedIn</a><a href="https://www.instagram.com/smio.mexico" target="_blank">Instagram</a><a href="https://www.youtube.com/@smio.mexico" target="_blank">YouTube</a></div>
       </div>
-      <div>
-        <a href="http://www.smio.org" target="_blank">smio.org</a> &middot;
-        <a href="mailto:smio.mexico@gmail.com">smio.mexico@gmail.com</a>
+      <div class="footer-bottom">
+        <div class="footer-logos"><img src="../assets/smio_logo.png" alt="SMIO"><img src="../assets/csmio_logo.png" alt="CSMIO 2026"><img src="../assets/hexaly-logo-white.svg" alt="Hexaly" class="hexaly-mark"></div>
+        <div>© 2026 · CSMIO Monterrey · Oct 7–9</div>
       </div>
     </div>
   </footer>
-
+  <script src="../shared/nodemap.js"></script>
 </body>
 </html>

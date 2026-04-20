@@ -3,160 +3,294 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SMIO-Hexaly Location Routing Challenge | Monterrey 2026</title>
+  <title>SMIO × Hexaly Location Routing Challenge · Monterrey 2026</title>
+  <meta name="description" content="A community optimization competition organized by SMIO with Hexaly as Diamond partner. Benchmark your methods on 30 CLRP instances and present your results at XIV CSMIO 2026 in Monterrey.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SMIO × Hexaly · Location Routing Challenge 2026">
+  <meta property="og:description" content="A community optimization competition in partnership with Hexaly. Benchmark your methods on 30 CLRP instances — leaderboard goes live July 2026, winners present at XIV CSMIO in Monterrey.">
+  <meta property="og:image" content="https://challenge.smio.org/assets/og-card.png">
+  <meta property="og:url" content="https://challenge.smio.org/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
+  <!-- NAV -->
   <nav class="nav">
     <div class="nav-inner">
-      <a href="index.html" class="nav-brand">
-        <img src="../assets/smio_logo.png" alt="SMIO">
-        Challenge 2026
-      </a>
-      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+      <a href="index.html" class="nav-brand"><img src="../assets/smio_logo.png" alt="SMIO"><img src="../assets/csmio_logo.png" alt="CSMIO"><span class="nav-brand-div"></span><img src="../assets/hexaly-logo-orange.svg" alt="Hexaly" class="nav-brand-hex"></a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">≡</button>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Inicio</a></li>
         <li><a href="problem.html">Problema</a></li>
         <li><a href="competition.html">Competencia</a></li>
         <li><a href="timeline.html">Cronograma</a></li>
         <li><a href="prizes.html">Premios</a></li>
-        <li><a href="register.html">Registro</a></li>
-        <li><a href="../en/index.html" style="border:1px solid rgba(255,255,255,0.3); border-radius:4px; padding:0.3rem 0.6rem; font-size:0.82rem;">EN</a></li>
+        <li><a href="../en/index.html" class="nav-lang">EN</a></li>
+        <li><a href="register.html" class="nav-cta">Regístrate →</a></li>
       </ul>
     </div>
   </nav>
 
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-logos">
-        <img src="../assets/smio_logo.png" alt="SMIO - Sociedad Mexicana de Investigaci&oacute;n de Operaciones">
-        <img src="../assets/csmio_logo.png" alt="XIV CSMIO Monterrey 2026">
-        <img src="../assets/hexaly-logo-white.svg" alt="Hexaly" style="height:40px;">
-      </div>
-      <h1>SMIO&ndash;Hexaly<br><span class="hero-accent">Location Routing Challenge</span></h1>
-      <p class="hero-subtitle">
-        Una competencia comunitaria de optimizaci&oacute;n. Resuelve el Problema de Localizaci&oacute;n-Ruteo con Capacidades, comp&aacute;rate contra Hexaly Optimizer y presenta tus resultados en el XIV CSMIO en Monterrey, M&eacute;xico.
-      </p>
-      <div style="display:flex; gap:1rem; flex-wrap:wrap;">
-        <a href="register.html" class="btn btn-primary">Registra tu inter&eacute;s</a>
-        <a href="problem.html" class="btn btn-secondary" style="border-color:rgba(255,255,255,0.3); color:rgba(255,255,255,0.9);">Conoce m&aacute;s</a>
+    <div class="hero-bg" data-nodemap data-seed="4" data-nodes="260" data-depots="7"
+         data-edge="rgba(26,30,60,0.15)" data-node="rgba(26,30,60,0.35)" data-depot="#E8793F" data-paper="#FDFBF7"></div>
+    <div class="wrap">
+      <div class="hero-meta">
+        <span><span class="dot"></span> Julio 2026 · Ventana de competencia</span>
+        <span>Ed. 01 / 2026</span>
+        <span>Monterrey · MX</span>
       </div>
 
-      <div class="hero-facts">
-        <div class="hero-fact">
-          <div class="hero-fact-label">Problema</div>
-          <div class="hero-fact-value">Localizaci&oacute;n-Ruteo con Capacidades (CLRP)</div>
+      <h1 class="hero-title">
+        Resuelve un problema de <span class="accent">localización-ruteo</span> a escala industrial.
+      </h1>
+      <p class="hero-sub">
+        Una competencia comunitaria de optimización organizada por la Sociedad Mexicana de Investigación de Operaciones, con Hexaly como patrocinador Diamante. Compara tus métodos contra Hexaly Optimizer en 30 instancias del CLRP. Presenta tus resultados en el XIV CSMIO en Monterrey.
+      </p>
+      <div class="hero-cta">
+        <a href="register.html" class="btn btn-orange">Registra tu interés <span class="btn-arrow">→</span></a>
+        <a href="problem.html" class="btn btn-ghost">Lee la especificación del problema</a>
+      </div>
+
+      <div class="lockup">
+        <span class="lockup-label">Organiza</span>
+        <img src="../assets/smio_logo.png" alt="SMIO — Sociedad Mexicana de Investigación de Operaciones">
+        <a href="https://csmio2026.my.canva.site/" target="_blank" rel="noopener"><img src="../assets/csmio_logo.png" alt="XIV CSMIO Monterrey 2026"></a>
+        <span class="lockup-label" style="margin-left: 1.6rem; padding-left: 1.6rem; padding-right: 0; border-right: 0; border-left: 1px solid var(--rule-2);">Patrocinador Diamante</span>
+        <img src="../assets/hexaly-logo-orange.svg" alt="Hexaly" class="hexaly-mark">
+      </div>
+    </div>
+  </section>
+
+  <!-- STATBAR -->
+  <div class="wrap">
+    <div class="statbar">
+      <div class="statbar-cell">
+        <div class="statbar-k">Problema</div>
+        <div class="statbar-v">CLRP<span class="mono-sub">Localización-Ruteo con Capacidades</span></div>
+      </div>
+      <div class="statbar-cell">
+        <div class="statbar-k">Instancias</div>
+        <div class="statbar-v">30<span class="mono-sub">200–3,000 clientes</span></div>
+      </div>
+      <div class="statbar-cell">
+        <div class="statbar-k">Categorías</div>
+        <div class="statbar-v">02<span class="mono-sub">Licenciatura · Abierta</span></div>
+      </div>
+      <div class="statbar-cell">
+        <div class="statbar-k">Ventana</div>
+        <div class="statbar-v">~3 sem<span class="mono-sub">Med. julio → Ppios. agosto</span></div>
+      </div>
+      <div class="statbar-cell">
+        <div class="statbar-k">Premio mayor</div>
+        <div class="statbar-v">CSMIO<span class="mono-sub">Viaje + escenario · $1,000 bono</span></div>
+      </div>
+      <div class="statbar-cell">
+        <div class="statbar-k">Congreso</div>
+        <div class="statbar-v">7–9 oct<span class="mono-sub">XIV CSMIO · Monterrey</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">01 / El Challenge</div>
+          <h2>Tres semanas.<br>Una tabla de clasificación.<br>Benchmarking real.</h2>
         </div>
-        <div class="hero-fact">
-          <div class="hero-fact-label">Instancias</div>
-          <div class="hero-fact-value">30 instancias, 200&ndash;3,000 clientes</div>
+        <p class="section-intro">
+          Antes de que abra la competencia, Hexaly Optimizer produce una solución base para cada instancia. Los participantes buscan las mejores soluciones posibles con cualquier método — metaheurísticas, branch-and-price, matheurísticas, aprendizaje automático. Una tabla de clasificación pública sigue el progreso en tiempo real. Los resultados se convierten en un benchmark permanente para la comunidad de IO.
+        </p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-num">01</div>
+          <h3>Gana el escenario</h3>
+          <p>Viaje patrocinado y un espacio de presentación dedicado en el CSMIO 2026 en Monterrey para un integrante de cada equipo ganador. Más tarjetas de regalo Amazon y merch de Hexaly para todo el equipo.</p>
         </div>
-        <div class="hero-fact">
-          <div class="hero-fact-label">Competencia</div>
-          <div class="hero-fact-value">~3 semanas en julio 2026</div>
+        <div class="card">
+          <div class="card-num">02</div>
+          <h3>Haz benchmarking riguroso</h3>
+          <p>Prueba tus algoritmos contra un solver industrial fuerte en un problema combinatorio rico, poco estudiado y con relevancia directa en el mundo real.</p>
         </div>
-        <div class="hero-fact">
-          <div class="hero-fact-label">Categor&iacute;as</div>
-          <div class="hero-fact-value">Licenciatura + Abierta</div>
-        </div>
-        <div class="hero-fact">
-          <div class="hero-fact-label">Premios</div>
-          <div class="hero-fact-value">Tarjetas de regalo, merch de Hexaly + apoyo de viaje</div>
-        </div>
-        <div class="hero-fact">
-          <div class="hero-fact-label">Congreso</div>
-          <div class="hero-fact-value">XIV CSMIO, 7&ndash;9 oct, Monterrey</div>
+        <div class="card">
+          <div class="card-num">03</div>
+          <h3>Únete a la comunidad</h3>
+          <p>Presenta en el congreso de IO más importante de México. Publica tus resultados en una biblioteca de benchmarks permanente junto a investigadores y profesionales.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="content">
-
-    <section>
-      <h2>&iquest;Qu&eacute; es este Challenge?</h2>
-      <p>
-        El <strong>SMIO&ndash;Hexaly Location Routing Challenge</strong> es una competencia de optimizaci&oacute;n organizada por la
-        <a href="http://www.smio.org" target="_blank">Sociedad Mexicana de Investigaci&oacute;n de Operaciones (SMIO)</a> en colaboraci&oacute;n con
-        <a href="https://www.hexaly.com" target="_blank">Hexaly</a>. Est&aacute; vinculada al
-        <strong>XIV Congreso de la SMIO (CSMIO 2026)</strong>, que se celebrar&aacute; del 7 al 9 de octubre de 2026 en la Universidad de Monterrey, Nuevo Le&oacute;n, M&eacute;xico.
-      </p>
-      <p>
-        Los equipos compiten para encontrar soluciones de alta calidad a un conjunto de instancias del <strong>Problema de Localizaci&oacute;n-Ruteo con Capacidades (CLRP)</strong>. Antes de la apertura, Hexaly Optimizer produce una soluci&oacute;n de referencia para cada instancia. Los participantes intentan encontrar las mejores soluciones posibles usando cualquier m&eacute;todo de su elecci&oacute;n. Un tablero de posiciones p&uacute;blico registra el progreso en tiempo real.
-      </p>
-    </section>
-
-    <section>
-      <h2>&iquest;Por qu&eacute; participar?</h2>
-      <div class="card-grid">
-        <div class="card">
-          <div class="card-icon">&#127942;</div>
-          <h3>Gana premios</h3>
-          <p>El equipo ganador de cada categor&iacute;a recibe tarjetas de regalo Amazon, merch de Hexaly y apoyo de viaje para presentar en el CSMIO 2026 en Monterrey.</p>
+  <!-- HOW -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">02 / Cómo funciona</div>
+          <h2>Del registro a la ceremonia de premiación.</h2>
         </div>
-        <div class="card">
-          <div class="card-icon">&#128300;</div>
-          <h3>Pon a prueba tus m&eacute;todos</h3>
-          <p>Eval&uacute;a tus algoritmos contra un solver industrial poderoso en un problema combinatorio rico y poco estudiado, con relevancia para el mundo real.</p>
+        <p class="section-intro">
+          La ventana de competencia es un sprint de ejecución — los equipos tienen acceso al generador de instancias semanas antes de que se publiquen las instancias reales. Desarrolla con calma y acelera cuando la tabla de clasificación entre en vivo.
+        </p>
+      </div>
+
+      <div class="callout-row">
+        <div class="callout">
+          <span class="callout-n">01 / PREP</span>
+          <div>
+            <h3>Regístrate y construye</h3>
+            <p>Forma un equipo (hasta 3, más un guía para la categoría Licenciatura). Regístrate en la plataforma. Desarrolla métodos usando el generador de instancias de código abierto liberado en junio de 2026. Las instancias oficiales <em>no</em> se publican en esta etapa.</p>
+          </div>
         </div>
-        <div class="card">
-          <div class="card-icon">&#127757;</div>
-          <h3>&Uacute;nete a la comunidad</h3>
-          <p>Con&eacute;ctate con la comunidad latinoamericana de IO. Presenta tu trabajo en el congreso de IO m&aacute;s importante de M&eacute;xico junto a investigadores y profesionales.</p>
+        <div class="callout">
+          <span class="callout-n">02 / COMP</span>
+          <div>
+            <h3>Compite</h3>
+            <p>Cuando abre la ventana de competencia (~3 semanas en julio), se publican las instancias oficiales y las soluciones base de Hexaly. Envía soluciones por la plataforma. La puntuación por tiempo de liderazgo premia encontrar buenas soluciones pronto <em>y</em> mantenerlas.</p>
+          </div>
+        </div>
+        <div class="callout">
+          <span class="callout-n">03 / PRESENTA</span>
+          <div>
+            <h3>Presenta en el CSMIO</h3>
+            <p>Los ganadores son invitados a presentar sus enfoques en una sesión dedicada al Challenge durante el CSMIO 2026 en Monterrey. Las soluciones finales se publican como benchmark permanente.</p>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <h2>&iquest;C&oacute;mo funciona?</h2>
-      <div class="callout">
-        <h3>1. Reg&iacute;strate y prep&aacute;rate</h3>
-        <p>Forma un equipo, reg&iacute;strate en la plataforma y desarrolla tus m&eacute;todos usando el generador de instancias de c&oacute;digo abierto (disponible en junio 2026). Las instancias oficiales de la competencia no se publicar&aacute;n hasta el inicio.</p>
+  <!-- PROBLEM TEASE -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">03 / El Problema</div>
+          <h2>Dónde abrir depósitos.<br>Cómo rutear vehículos.</h2>
+        </div>
+        <p class="section-intro">
+          El CLRP combina dos decisiones difíciles en un solo modelo. Es directamente relevante para compañías como OXXO, Bimbo y FEMSA, que enfrentan estas decisiones a diario en el panorama logístico mexicano. Ningún paradigma algorítmico domina — justamente por eso es un buen reto.
+        </p>
       </div>
-      <div class="callout">
-        <h3>2. Compite</h3>
-        <p>Cuando se abra la ventana de competencia (~3 semanas en julio), se publican las instancias oficiales y las soluciones de referencia de Hexaly. Env&iacute;a tus mejores soluciones a trav&eacute;s de la plataforma web. El tablero de posiciones se actualiza en tiempo real.</p>
+
+      <div class="grid-2" style="align-items: stretch;">
+        <div class="formula">
+          <div><span class="c"># objetivo</span></div>
+          <div>min&nbsp;&nbsp;<span class="k">Σ</span> f<sub>i</sub> · y<sub>i</sub>
+            &nbsp;&nbsp;<span class="c">// apertura de depósitos</span></div>
+          <div>&nbsp;&nbsp;&nbsp;+ <span class="k">Σ</span> v · z<sub>r</sub>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="c">// vehículos despachados</span></div>
+          <div>&nbsp;&nbsp;&nbsp;+ <span class="k">Σ</span> c<sub>ij</sub> · x<sub>ij</sub>
+            &nbsp;&nbsp;<span class="c">// distancia de viaje</span></div>
+          <div style="margin-top:0.8rem"><span class="c">sujeto a servicio al cliente,</span></div>
+          <div><span class="c">capacidad de vehículo y depósito, límite de vehículos.</span></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div style="border: 1px solid var(--rule); aspect-ratio: 16/10; background: var(--paper-2); position: relative; overflow: hidden;">
+            <div data-nodemap data-seed="12" data-nodes="160" data-depots="5" style="position: absolute; inset: 0;"
+                 data-edge="rgba(26,30,60,0.28)" data-node="rgba(26,30,60,0.6)" data-depot="#E8793F" data-paper="#F7F4EE"></div>
+          </div>
+          <a href="problem.html" class="btn btn-ghost">Lee la especificación completa del problema <span class="btn-arrow">→</span></a>
+        </div>
       </div>
-      <div class="callout">
-        <h3>3. Presenta en el CSMIO</h3>
-        <p>Los ganadores son invitados a presentar sus enfoques en una sesi&oacute;n dedicada del Challenge durante el CSMIO 2026 en Monterrey. Los resultados se publican como un benchmark permanente.</p>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">04 / Socios</div>
+          <h2>Organizado por SMIO, impulsado por Hexaly.</h2>
+        </div>
+        <p class="section-intro">
+          Una alianza de patrocinio Diamante entre la comunidad mexicana de Investigación de Operaciones y una empresa líder en tecnología de optimización industrial.
+        </p>
       </div>
-    </section>
 
-    <section>
-      <h2>El problema: Localizaci&oacute;n-Ruteo</h2>
-      <p>
-        El CLRP combina dos decisiones dif&iacute;ciles: <strong>d&oacute;nde abrir dep&oacute;sitos</strong> y <strong>c&oacute;mo rutear veh&iacute;culos</strong> desde esos dep&oacute;sitos para servir a los clientes. Es directamente relevante para empresas como OXXO, Bimbo y FEMSA, que enfrentan estas decisiones diariamente en la log&iacute;stica mexicana.
-      </p>
-      <p>
-        Ning&uacute;n paradigma algor&iacute;tmico domina este problema, lo que lo abre a metaheur&iacute;sticas, m&eacute;todos de descomposici&oacute;n, branch-and-price, matheur&iacute;sticas, aprendizaje autom&aacute;tico y enfoques h&iacute;bridos.
-      </p>
-      <p><a href="problem.html" class="btn btn-secondary">M&aacute;s sobre el problema &rarr;</a></p>
-    </section>
+      <div class="grid-2">
+        <div style="border: 1px solid var(--rule); background: var(--paper); padding: 2.2rem;">
+          <img src="../assets/smio_logo.png" alt="SMIO" style="height: 72px; margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.4em;">Sociedad Mexicana de Investigación de Operaciones</h3>
+          <p style="color: var(--ink-2); font-size: 0.95rem;">La sociedad científica que representa a la comunidad de Investigación de Operaciones en México. Organiza el <a href="https://csmio2026.my.canva.site/" target="_blank" style="color: var(--orange); border-bottom: 1px solid currentColor;">XIV CSMIO</a> y custodia la misión educativa del Challenge a través de la categoría Licenciatura.</p>
+          <div style="display: flex; gap: 1.2rem; flex-wrap: wrap; margin-top: 1rem;">
+            <a href="https://www.smio.org" target="_blank" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--orange); border-bottom: 1px solid currentColor; padding-bottom: 1px;">smio.org →</a>
+            <a href="https://csmio2026.my.canva.site/" target="_blank" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--orange); border-bottom: 1px solid currentColor; padding-bottom: 1px;">csmio2026 →</a>
+          </div>
+        </div>
+        <div style="border: 1px solid var(--rule); background: var(--ink); color: var(--paper); padding: 2.2rem;">
+          <img src="../assets/hexaly-logo-white.svg" alt="Hexaly" style="height: 56px; margin-bottom: 1.8rem; filter: brightness(0) invert(1);">
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.4em; color: var(--paper);">Patrocinador Diamante</h3>
+          <p style="color: oklch(0.85 0.005 80); font-size: 0.95rem;">Hexaly es una empresa de optimización industrial cuyo solver produce las soluciones base para cada instancia. Ofrece licencias académicas gratuitas a todos los participantes — uses o no Hexaly para competir.</p>
+          <a href="https://www.hexaly.com" target="_blank" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--orange); border-bottom: 1px solid currentColor; padding-bottom: 1px; display: inline-block; margin-top: 1rem;">hexaly.com →</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  </div>
+  <!-- CTA -->
+  <section class="section" style="border-bottom: 0;">
+    <div class="wrap" style="text-align: center; max-width: 680px;">
+      <div class="eyebrow" style="justify-content: center;">¿Listo para competir?</div>
+      <h2 style="font-size: clamp(2rem, 4vw, 3.2rem); margin-top: 1rem; margin-bottom: 1rem;">Registra tu interés<br>y te avisamos cuando abra la plataforma.</h2>
+      <p style="color: var(--ink-2); margin: 0 auto 2rem; font-size: 1.05rem;">El registro formal de equipos abre junto con la liberación del generador de instancias en junio de 2026.</p>
+      <a href="register.html" class="btn btn-orange" style="padding: 1rem 1.6rem; font-size: 1rem;">Registra tu interés <span class="btn-arrow">→</span></a>
+    </div>
+  </section>
 
-  <div class="sponsor-banner">
-    <div class="sponsor-banner-label">Patrocinador Diamante</div>
-    <p>Organizado por SMIO en colaboraciOrganizado por SMIO en colaboraci&oacute;n con <a href="https://www.hexaly.com" target="_blank"><strong>Hexaly</strong></a>oacute;n con <a href="https://www.hexaly.com" target="_blank"><img src="../assets/hexaly-logo-orange.svg" alt="Hexaly" style="height:24px; vertical-align:middle; display:inline;"></a></p>
-  </div>
-
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-logos">
-        <img src="../assets/smio_logo.png" alt="SMIO">
-        <img src="../assets/csmio_logo.png" alt="CSMIO 2026">
-        <img src="../assets/hexaly-logo-white.svg" alt="Hexaly" style="height:28px;">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <div style="font-family: var(--font-sans); font-size: 1.1rem; color: var(--paper); margin-bottom: 0.8rem; font-weight: 500; letter-spacing: -0.02em;">SMIO × Hexaly<br>Location Routing Challenge 2026</div>
+          <p style="color: oklch(0.65 0.01 80); font-size: 0.88rem;">Una competencia comunitaria de optimización, organizada por la Sociedad Mexicana de Investigación de Operaciones.</p>
+        </div>
+        <div>
+          <h4>Challenge</h4>
+          <a href="index.html">Inicio</a>
+          <a href="problem.html">Problema</a>
+          <a href="competition.html">Competencia</a>
+          <a href="timeline.html">Cronograma</a>
+          <a href="prizes.html">Premios</a>
+          <a href="register.html">Registro</a>
+        </div>
+        <div>
+          <h4>Organizaciones</h4>
+          <a href="https://www.smio.org" target="_blank">smio.org</a>
+          <a href="https://csmio2026.my.canva.site/" target="_blank">csmio2026.my.canva.site</a>
+          <a href="https://www.hexaly.com" target="_blank">hexaly.com</a>
+          <a href="mailto:smio.mexico@gmail.com">smio.mexico@gmail.com</a>
+        </div>
+        <div>
+          <h4>Síguenos</h4>
+          <a href="https://www.linkedin.com/company/sociedad-mexicana-de-investigaci%C3%B3n-de-operaciones" target="_blank">LinkedIn</a>
+          <a href="https://www.instagram.com/smio.mexico" target="_blank">Instagram</a>
+          <a href="https://www.youtube.com/@smio.mexico" target="_blank">YouTube</a>
+        </div>
       </div>
-      <div>
-        <a href="http://www.smio.org" target="_blank">smio.org</a> &middot;
-        <a href="mailto:smio.mexico@gmail.com">smio.mexico@gmail.com</a>
+      <div class="footer-bottom">
+        <div class="footer-logos">
+          <img src="../assets/smio_logo.png" alt="SMIO">
+          <img src="../assets/csmio_logo.png" alt="CSMIO 2026">
+          <img src="../assets/hexaly-logo-white.svg" alt="Hexaly" class="hexaly-mark">
+        </div>
+        <div>© 2026 · CSMIO Monterrey · 7–9 oct</div>
       </div>
     </div>
   </footer>
 
+  <script src="../shared/nodemap.js"></script>
 </body>
 </html>

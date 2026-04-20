@@ -3,111 +3,169 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prizes | SMIO-Hexaly Challenge 2026</title>
+  <title>Prizes · SMIO × Hexaly Challenge 2026</title>
+  <meta name="description" content="A community optimization competition organized by SMIO with Hexaly as Diamond partner. Benchmark your methods on 30 CLRP instances and present your results at XIV CSMIO 2026 in Monterrey.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SMIO × Hexaly · Location Routing Challenge 2026">
+  <meta property="og:description" content="A community optimization competition in partnership with Hexaly. Benchmark your methods on 30 CLRP instances — leaderboard goes live July 2026, winners present at XIV CSMIO in Monterrey.">
+  <meta property="og:image" content="https://challenge.smio.org/assets/og-card.png">
+  <meta property="og:url" content="https://challenge.smio.org/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-
   <nav class="nav">
     <div class="nav-inner">
-      <a href="index.html" class="nav-brand"><img src="../assets/smio_logo.png" alt="SMIO"> Challenge 2026</a>
-      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+      <a href="index.html" class="nav-brand"><img src="../assets/smio_logo.png" alt="SMIO"><img src="../assets/csmio_logo.png" alt="CSMIO"><span class="nav-brand-div"></span><img src="../assets/hexaly-logo-orange.svg" alt="Hexaly" class="nav-brand-hex"></a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">≡</button>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Overview</a></li>
         <li><a href="problem.html">Problem</a></li>
         <li><a href="competition.html">Competition</a></li>
         <li><a href="timeline.html">Timeline</a></li>
         <li><a href="prizes.html" class="active">Prizes</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="../es/prizes.html" style="border:1px solid rgba(255,255,255,0.3); border-radius:4px; padding:0.3rem 0.6rem; font-size:0.82rem;">ES</a></li>
+        <li><a href="../es/prizes.html" class="nav-lang">ES</a></li>
+        <li><a href="register.html" class="nav-cta">Register →</a></li>
       </ul>
     </div>
   </nav>
 
   <header class="page-header">
-    <div class="page-header-inner">
-      <h1>Prizes</h1>
-      <p>One winning team per track &mdash; gift cards, Hexaly merch, travel support, and a stage at CSMIO 2026.</p>
+    <div class="nodeplot" data-nodemap data-seed="44" data-nodes="140" data-depots="4"
+         data-edge="rgba(26,30,60,0.18)" data-node="rgba(26,30,60,0.45)" data-depot="#E8793F" data-paper="#FDFBF7"></div>
+    <div class="wrap">
+      <div class="page-header-inner">
+        <div>
+          <div class="eyebrow">Prizes · 04 / 05</div>
+          <h1 style="margin-top: 0.8rem;">A stage at<br>CSMIO 2026.</h1>
+        </div>
+        <p class="page-header-desc">One winning team per track gets sponsored travel to CSMIO 2026 and a dedicated presentation slot at the Challenge session in Monterrey. Plus $1,000 USD in Amazon gift cards and Hexaly merch for the whole team as a bonus.</p>
+      </div>
     </div>
   </header>
 
-  <div class="content">
-
-    <section>
-      <p>Each track (Undergraduate and Open) has <strong>one winning team</strong>, determined by the highest score under the lead-time scoring system.</p>
-
-      <div class="card-grid">
-        <div class="card" style="border-top: 4px solid var(--teal);">
-          <div class="card-icon">&#127873;</div>
-          <h3>Amazon Gift Cards</h3>
-          <p><strong>Undergraduate Track:</strong> $100 USD per person ($400 USD per team, including the guide).</p>
-          <p><strong>Open Track:</strong> $200 USD per person ($600 USD per team).</p>
-          <p style="margin-top:0.5rem; font-size:0.9rem; color:var(--slate);">Total prize pool: $1,000 USD in gift cards.</p>
+  <!-- PRIZE CARDS -->
+  <section class="section">
+    <div class="wrap">
+      <div class="prize-grid">
+        <div class="prize">
+          <div class="prize-head">
+            <div>
+              <span class="tag tag-teal">Undergraduate</span>
+              <h3 style="margin-top: 0.6rem;">Winning team</h3>
+            </div>
+            <div style="text-align: right;">
+              <div class="prize-amount">CSMIO<small>Travel + stage</small></div>
+            </div>
+          </div>
+          <ul>
+            <li>Sponsored trip to CSMIO 2026 for 1 team member (travel + lodging + registration)</li>
+            <li>Dedicated presentation slot at the Challenge session</li>
+            <li>Hexaly hoodie + t-shirt for each member (up to 4)</li>
+            <li>$100 USD Amazon gift card per person · $400 total incl. guide <span style="color: var(--ink-4);">— bonus</span></li>
+            <li>Final solutions entered into permanent benchmark</li>
+          </ul>
         </div>
-        <div class="card" style="border-top: 4px solid var(--orange);">
-          <div class="card-icon">&#128085;</div>
-          <h3>Hexaly Merch</h3>
-          <p>Every member of each winning team receives <strong>1 Hexaly hoodie + 1 Hexaly t-shirt</strong> (up to 3 members per team, plus the guide for the Undergraduate track).</p>
+        <div class="prize">
+          <div class="prize-head">
+            <div>
+              <span class="tag tag-orange">Open</span>
+              <h3 style="margin-top: 0.6rem;">Winning team</h3>
+            </div>
+            <div style="text-align: right;">
+              <div class="prize-amount">CSMIO<small>Travel + stage</small></div>
+            </div>
+          </div>
+          <ul>
+            <li>Sponsored trip to CSMIO 2026 for 1 team member (travel + lodging + registration)</li>
+            <li>Dedicated presentation slot at the Challenge session</li>
+            <li>Hexaly hoodie + t-shirt for each member (up to 3)</li>
+            <li>$200 USD Amazon gift card per person · $600 total <span style="color: var(--ink-4);">— bonus</span></li>
+            <li>Final solutions entered into permanent benchmark</li>
+          </ul>
         </div>
       </div>
-      <div class="card-grid">
-        <div class="card" style="border-top: 4px solid var(--navy);">
-          <div class="card-icon" style="background:linear-gradient(135deg, var(--navy), var(--navy-light));">&#9992;&#65039;</div>
-          <h3>Travel Support to CSMIO 2026</h3>
-          <p><strong>One member</strong> from each winning team will be sponsored to attend CSMIO 2026 in Monterrey, Mexico. Travel, accommodation, and conference registration are covered.</p>
-        </div>
-        <div class="card" style="border-top: 4px solid var(--teal);">
-          <div class="card-icon">&#127908;</div>
-          <h3>Presentation at CSMIO 2026</h3>
-          <p>Winning teams are invited to <strong>present their approaches</strong> at a dedicated Challenge session during the XIV CSMIO. Share your methods with the Latin American OR community.</p>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <h2>Summary by Track</h2>
-      <table class="styled-table">
+  <!-- COMPARISON TABLE -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">§ Summary by track</div>
+          <h2>Side-by-side.</h2>
+        </div>
+        <p class="section-intro">Each track has one winning team, determined by the highest score under lead-time scoring.</p>
+      </div>
+
+      <div class="table-wrap">
+      <table class="tbl">
         <thead>
-          <tr><th>Prize</th><th>Undergraduate Track</th><th>Open Track</th></tr>
+          <tr><th>Prize</th><th>Undergraduate</th><th>Open</th></tr>
         </thead>
         <tbody>
-          <tr><td>Amazon gift cards</td><td>$100 USD/person ($400 total)</td><td>$200 USD/person ($600 total)</td></tr>
-          <tr><td>Hexaly hoodie + t-shirt</td><td>Each member (up to 4)</td><td>Each member (up to 3)</td></tr>
-          <tr><td>Travel + accommodation + registration to CSMIO</td><td>1 team member</td><td>1 team member</td></tr>
-          <tr><td>Presentation slot at CSMIO 2026</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td><strong>Travel to CSMIO + lodging + registration</strong></td><td>1 team member</td><td>1 team member</td></tr>
+          <tr><td><strong>Presentation slot at CSMIO 2026</strong></td><td>Yes</td><td>Yes</td></tr>
+          <tr><td><strong>Hexaly hoodie + t-shirt</strong></td><td>Each member (up to 4)</td><td>Each member (up to 3)</td></tr>
+          <tr><td><strong>Amazon gift cards</strong> <span style="color: var(--ink-4); font-weight: 400; font-size: 0.82rem;">bonus</span></td><td>$100 USD/person · $400 total</td><td>$200 USD/person · $600 total</td></tr>
         </tbody>
       </table>
-    </section>
-
-    <section>
-      <h2>For All Participants</h2>
-      <div class="callout">
-        <h3>Free Academic Licenses</h3>
-        <p>Hexaly provides <strong>free academic licenses</strong> to all students and academics. You don't need to use Hexaly to compete, but it's available if you want to explore it.</p>
       </div>
-      <div class="callout">
-        <h3>Permanent Benchmark</h3>
-        <p>All final solutions (but not code) will be published as part of a <strong>permanent benchmark library</strong> for the CLRP. Your work contributes to the research community regardless of your final ranking.</p>
-      </div>
-    </section>
+    </div>
+  </section>
 
-  </div>
+  <!-- FOR ALL -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">§ For every participant</div>
+          <h2>Benefits beyond the podium.</h2>
+        </div>
+        <p class="section-intro">Whether you win or not, participation connects you to the OR community and to a leading industrial solver.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="callout">
+          <span class="callout-n">FREE</span>
+          <div>
+            <h3>Free academic Hexaly licenses</h3>
+            <p>Hexaly provides free academic licenses to all students and academics. You don't need to use Hexaly to compete, but it's available if you want to explore it.</p>
+          </div>
+        </div>
+        <div class="callout">
+          <span class="callout-n">OPEN</span>
+          <div>
+            <h3>Permanent benchmark library</h3>
+            <p>All final solutions (but not code) will be published as part of a permanent benchmark library for the CLRP. Your work contributes to the research community regardless of your final ranking.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-logos">
-        <img src="../assets/smio_logo.png" alt="SMIO">
-        <img src="../assets/csmio_logo.png" alt="CSMIO 2026">
-        <img src="../assets/hexaly-logo-white.svg" alt="Hexaly" style="height:28px;">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <div style="font-family: var(--font-sans); font-size: 1.1rem; color: var(--paper); margin-bottom: 0.8rem; font-weight: 500; letter-spacing: -0.02em;">SMIO × Hexaly<br>Location Routing Challenge 2026</div>
+          <p style="color: oklch(0.65 0.01 80); font-size: 0.88rem;">A community-driven optimization competition, hosted by the Mexican Society of Operations Research.</p>
+        </div>
+        <div><h4>Challenge</h4><a href="index.html">Overview</a><a href="problem.html">Problem</a><a href="competition.html">Competition</a><a href="timeline.html">Timeline</a><a href="prizes.html">Prizes</a><a href="register.html">Register</a></div>
+        <div><h4>Organizations</h4><a href="https://www.smio.org" target="_blank">smio.org</a><a href="https://csmio2026.my.canva.site/" target="_blank">csmio2026.my.canva.site</a><a href="https://www.hexaly.com" target="_blank">hexaly.com</a><a href="mailto:smio.mexico@gmail.com">smio.mexico@gmail.com</a></div>
+        <div><h4>Follow</h4><a href="https://www.linkedin.com/company/sociedad-mexicana-de-investigaci%C3%B3n-de-operaciones" target="_blank">LinkedIn</a><a href="https://www.instagram.com/smio.mexico" target="_blank">Instagram</a><a href="https://www.youtube.com/@smio.mexico" target="_blank">YouTube</a></div>
       </div>
-      <div>
-        <a href="http://www.smio.org" target="_blank">smio.org</a> &middot;
-        <a href="mailto:smio.mexico@gmail.com">smio.mexico@gmail.com</a>
+      <div class="footer-bottom">
+        <div class="footer-logos"><img src="../assets/smio_logo.png" alt="SMIO"><img src="../assets/csmio_logo.png" alt="CSMIO 2026"><img src="../assets/hexaly-logo-white.svg" alt="Hexaly" class="hexaly-mark"></div>
+        <div>© 2026 · CSMIO Monterrey · Oct 7–9</div>
       </div>
     </div>
   </footer>
-
+  <script src="../shared/nodemap.js"></script>
 </body>
 </html>
