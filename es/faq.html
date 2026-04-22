@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas frecuentes · SMIO × Hexaly Reto 2026</title>
+  <meta name="description" content="Preguntas frecuentes sobre el Reto SMIO × Hexaly Location Routing 2026 — elegibilidad, equipos, puntuación, entregas y más.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SMIO × Hexaly · Location Routing Reto 2026">
+  <meta property="og:description" content="A community optimization competition in partnership with Hexaly. Benchmark your methods on 30 CLRP instances — leaderboard goes live July 2026, winners present at XIV CSMIO in Monterrey.">
+  <meta property="og:image" content="https://challenge.smio.org/assets/og-card.png">
+  <meta property="og:url" content="https://challenge.smio.org/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .faq-list { border-top: 1px solid var(--rule); }
+    .faq-item {
+      border-bottom: 1px solid var(--rule);
+      padding: 0;
+    }
+    .faq-item > summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1.4rem 0;
+      display: grid;
+      grid-template-columns: 56px 1fr 28px;
+      gap: 1rem;
+      align-items: baseline;
+      font-family: var(--font-sans);
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--ink);
+      letter-spacing: -0.015em;
+    }
+    .faq-item > summary::-webkit-details-marker { display: none; }
+    .faq-item > summary::marker { content: ''; }
+    .faq-item .faq-n {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      letter-spacing: 0.1em;
+      color: var(--orange);
+      text-transform: uppercase;
+    }
+    .faq-item .faq-caret {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: var(--ink-3);
+      text-align: right;
+      transition: transform 0.15s, color 0.15s;
+    }
+    .faq-item[open] .faq-caret { transform: rotate(45deg); color: var(--orange); }
+    .faq-item > summary:hover { color: var(--orange); }
+    .faq-item > summary:hover .faq-caret { color: var(--orange); }
+    .faq-body {
+      padding: 0 0 1.6rem 72px;
+      color: var(--ink-2);
+      font-size: 0.98rem;
+      line-height: 1.65;
+      max-width: 70ch;
+    }
+    .faq-body a { color: var(--orange); border-bottom: 1px solid currentColor; }
+    .faq-body a:hover { color: var(--ink); }
+    @media (max-width: 700px) {
+      .faq-item > summary { grid-template-columns: 44px 1fr 24px; font-size: 1rem; }
+      .faq-body { padding-left: 56px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand"><img src="../assets/smio_logo.png" alt="SMIO"><img src="../assets/csmio_logo.png" alt="CSMIO"><span class="nav-brand-div"></span><img src="../assets/hexaly-logo-orange.svg" alt="Hexaly" class="nav-brand-hex"></a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">≡</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="problem.html">Problema</a></li>
+        <li><a href="competition.html">Competencia</a></li>
+        <li><a href="timeline.html">Cronograma</a></li>
+        <li><a href="prizes.html">Premios</a></li>
+        <li><a href="faq.html" class="active">FAQ</a></li>
+        <li><a href="../en/faq.html" class="nav-lang">EN</a></li>
+        <li><a href="register.html" class="nav-cta">Regístrate →</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="nodeplot" data-nodemap data-seed="73" data-nodes="140" data-depots="4"
+         data-edge="rgba(26,30,60,0.18)" data-node="rgba(26,30,60,0.45)" data-depot="#E8793F" data-paper="#FDFBF7"></div>
+    <div class="wrap">
+      <div class="page-header-inner">
+        <div>
+          <div class="eyebrow">FAQ · 06 / 06</div>
+          <h1 style="margin-top: 0.8rem;">Preguntas<br>frecuentes.</h1>
+        </div>
+        <p class="page-header-desc">Respuestas rápidas a las dudas más comunes sobre elegibilidad, equipos, puntuación y entregas. ¿No encuentras la tuya? Escribe a <a href="mailto:smio.mexico@gmail.com" style="color: var(--orange); border-bottom: 1px solid currentColor;">smio.mexico@gmail.com</a>.</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">§ Preguntas comunes</div>
+          <h2>Lo esencial.</h2>
+        </div>
+        <p class="section-intro">Redactado con base en lo confirmado hoy. Los detalles ligados a las reglas completas (valor del bono, formato de entrega) se finalizarán al lanzar la competencia.</p>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary><span class="faq-n">01</span><span>¿Quién puede participar?</span><span class="faq-caret">+</span></summary>
+          <div class="faq-body">
+            Cualquier persona con membresía vigente de SMIO. Los equipos compiten en una de dos categorías: <strong>Licenciatura</strong> (1 a 3 estudiantes de licenciatura más 1 guía) o <strong>Abierta</strong> (1 a 3 participantes, sin restricción de perfil). A través de la alianza ALIO, miembros de otras sociedades latinoamericanas de IO pueden obtener la membresía SMIO con tarifa preferente.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><span class="faq-n">02</span><span>¿Qué tamaño puede tener mi equipo?</span><span class="faq-caret">+</span></summary>
+          <div class="faq-body">
+            Los equipos pueden tener menos de 3 miembros — 3 es el máximo, no un requisito. Categoría Licenciatura: <strong>1 a 3</strong> estudiantes de licenciatura más 1 guía (estudiante de posgrado, profesor o profesional de la industria). Categoría Abierta: <strong>1 a 3</strong> participantes sin restricción de perfil. Cada persona sólo puede pertenecer a un equipo.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><span class="faq-n">03</span><span>¿Todos los miembros tienen que ser de la misma universidad?</span><span class="faq-caret">+</span></summary>
+          <div class="faq-body">
+            No. Puedes formar equipo con quien quieras — distintas universidades, distintas ciudades o distintos países. Las únicas reglas son la membresía SMIO para cada participante y los requisitos de perfil por categoría (p. ej., estudiantes de licenciatura para la categoría Licenciatura).
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><span class="faq-n">04</span><span>¿Pueden participar equipos fuera de México?</span><span class="faq-caret">+</span></summary>
+          <div class="faq-body">
+            Sí. La participación es internacional a través de la membresía SMIO / ALIO — no necesitas vivir o estudiar en México.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><span class="faq-n">05</span><span>¿Tengo que usar Hexaly?</span><span class="faq-caret">+</span></summary>
+          <div class="faq-body">
+            No. Se permite cualquier software — solvers comerciales, herramientas de código abierto o implementaciones propias. Hexaly Optimizer genera la línea base de referencia para las 30 instancias, pero <em>no</em> compite en el leaderboard. Hexaly ofrece licencias académicas gratuitas a todos los participantes registrados si quieres probarlo.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><span class="faq-n">06</span><span>¿Cómo se desarrolla la competencia?</span><span class="faq-caret">+</span></summary>
+          <div class="faq-body">
+            El reto se desarrolla en dos fases. Primero se publican un <strong>generador de instancias</strong> y un conjunto de <strong>instancias de práctica</strong> para que los equipos desarrollen, prueben y afinen sus métodos sin presión de puntuación. Después se liberan las <strong>30 instancias finales</strong> y los equipos tienen <strong>3 semanas</strong> para trabajar en ellas — sólo esta ventana cuenta para el leaderboard y el puntaje final.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><span class="faq-n">07</span><span>¿Cómo se calcula el puntaje?</span><span class="faq-caret">+</span></summary>
+          <div class="faq-body">
+            Puntuación por tiempo de liderazgo. Para cada una de las 30 instancias finales, el equipo que mantenga la mejor solución participante acumula puntos por cada día calendario que la sostenga durante la ventana de 3 semanas, más un bono por mantener la mejor solución al cierre de la competencia. El valor exacto del bono y las reglas completas se publicarán con el lanzamiento de la competencia. Consulta la página de <a href="competition.html">Competencia</a> para ver la fórmula.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><span class="faq-n">08</span><span>¿Cuándo inicia y termina la competencia?</span><span class="faq-caret">+</span></summary>
+          <div class="faq-body">
+            El leaderboard en vivo abre a mediados de julio de 2026 y cierra 3 semanas después (aproximadamente a principios de agosto) al terminar la ventana de competencia — <em>no</em> permanece abierto hasta el CSMIO. Los ganadores presentan en el CSMIO 2026 en Monterrey, 7–9 de octubre. Consulta la página de <a href="timeline.html">Cronograma</a> para el calendario completo.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><span class="faq-n">09</span><span>¿Cómo envío una solución?</span><span class="faq-caret">+</span></summary>
+          <div class="faq-body">
+            Todas las entregas se realizan por la plataforma web oficial. No se aceptan entregas manuales ni por correo electrónico. Los detalles del formato de entrega se publicarán con las reglas completas.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><span class="faq-n">10</span><span>¿Mis soluciones y mi código se harán públicos?</span><span class="faq-caret">+</span></summary>
+          <div class="faq-body">
+            Las soluciones que establezcan un nuevo mejor se registran, pero no se muestran en el leaderboard público hasta que termina la competencia — esto evita que los equipos mejoren localmente los resultados de otros. Al cerrar la competencia, las soluciones finales (no el código) se publican como parte de una biblioteca permanente de benchmarks del CLRP.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><span class="faq-n">11</span><span>¿Con quién contacto si tengo dudas?</span><span class="faq-caret">+</span></summary>
+          <div class="faq-body">
+            Escribe a <a href="mailto:smio.mexico@gmail.com">smio.mexico@gmail.com</a>. Actualizaremos esta página conforme recibamos preguntas recurrentes.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <div style="font-family: var(--font-sans); font-size: 1.1rem; color: var(--paper); margin-bottom: 0.8rem; font-weight: 500; letter-spacing: -0.02em;">SMIO × Hexaly<br>Location Routing Reto 2026</div>
+          <p style="color: oklch(0.65 0.01 80); font-size: 0.88rem;">Una competencia comunitaria de optimización, organizada por la Sociedad Mexicana de Investigación de Operaciones.</p>
+        </div>
+        <div><h4>Reto</h4><a href="index.html">Inicio</a><a href="problem.html">Problema</a><a href="competition.html">Competencia</a><a href="timeline.html">Cronograma</a><a href="prizes.html">Premios</a><a href="faq.html">FAQ</a><a href="register.html">Registro</a></div>
+        <div><h4>Organizaciones</h4><a href="https://www.smio.org" target="_blank">smio.org</a><a href="https://csmio2026.my.canva.site/" target="_blank">csmio2026.my.canva.site</a><a href="https://www.hexaly.com" target="_blank">hexaly.com</a><a href="mailto:smio.mexico@gmail.com">smio.mexico@gmail.com</a></div>
+        <div><h4>Síguenos</h4><a href="https://www.linkedin.com/company/sociedad-mexicana-de-investigaci%C3%B3n-de-operaciones" target="_blank">LinkedIn</a><a href="https://www.instagram.com/smio.mexico" target="_blank">Instagram</a><a href="https://www.youtube.com/@smio.mexico" target="_blank">YouTube</a></div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-logos"><img src="../assets/smio_logo.png" alt="SMIO"><img src="../assets/csmio_logo.png" alt="CSMIO 2026"><img src="../assets/hexaly-logo-white.svg" alt="Hexaly" class="hexaly-mark"></div>
+        <div>© 2026 · CSMIO Monterrey · 7–9 oct</div>
+      </div>
+    </div>
+  </footer>
+  <script src="../shared/nodemap.js"></script>
+</body>
+</html>
