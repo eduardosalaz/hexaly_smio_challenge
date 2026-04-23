@@ -16,6 +16,69 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
+  <style>
+    .clrp-viz-card {
+      border: 1px solid var(--rule);
+      background: var(--paper);
+      overflow: hidden;
+    }
+    .clrp-viz-card .clrp-svg {
+      aspect-ratio: 25/14;
+      background: var(--paper);
+    }
+    .clrp-viz-card .clrp-svg svg { width: 100%; height: 100%; }
+    .clrp-viz-card .clrp-stats {
+      border-top: 1px solid var(--rule);
+      padding: 1rem 1.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.6rem 1.6rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      color: var(--ink-3);
+    }
+    .clrp-depot-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+    .clrp-depot-pill .clrp-pill-dot {
+      width: 10px; height: 10px; flex: 0 0 10px;
+      background: var(--dot, var(--orange));
+    }
+    .clrp-depot-pill .clrp-pill-lbl {
+      color: var(--ink);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+    }
+    .clrp-stats-summary {
+      color: var(--ink);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      margin-left: auto;
+      padding-left: 1.6rem;
+      border-left: 1px solid var(--rule);
+    }
+    .clrp-viz-caption {
+      margin-top: 0.9rem;
+      max-width: none;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--ink-3);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: right;
+    }
+    @media (max-width: 760px) {
+      .clrp-stats-summary {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: 0;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -101,8 +164,26 @@
     </div>
   </section>
 
-  <!-- OBJECTIVE / FORMULA -->
+  <!-- VISUALIZER -->
   <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">§ Worked example</div>
+          <h2>30 clients.<br>5 candidates.<br>Open 3.</h2>
+        </div>
+        <p class="section-intro">A miniature CLRP instance — five depot candidates, three chosen. Every client is assigned to exactly one open depot; each open depot operates a small set of routes that respect vehicle capacity. Closed candidates are crossed out; each open depot and its routes share a color.</p>
+      </div>
+
+      <div class="clrp-viz-card">
+        <div data-clrp-viz data-seed="17" data-lang="en"></div>
+      </div>
+      <p class="clrp-viz-caption">FIG 02 · n = 30 clients · |D| = 5 candidates · 3 opened · vehicle capacity Q = 65</p>
+    </div>
+  </section>
+
+  <!-- OBJECTIVE / FORMULA -->
+  <section class="section section-alt">
     <div class="wrap">
       <div class="section-head">
         <div>
@@ -144,7 +225,7 @@
   </section>
 
   <!-- CONSTRAINTS -->
-  <section class="section section-alt">
+  <section class="section">
     <div class="wrap">
       <div class="section-head">
         <div>
@@ -172,33 +253,24 @@
   </section>
 
   <!-- INDUSTRIAL RELEVANCE -->
-  <section class="section">
+  <section class="section section-alt">
     <div class="wrap">
-      <div class="grid-2" style="align-items: start; gap: 4rem;">
+      <div class="section-head">
         <div>
           <div class="eyebrow">§ Why this problem</div>
-          <h2 style="margin-top: 1rem;">Real relevance.<br>Room to innovate.</h2>
-          <div class="prose" style="margin-top: 1.5rem;">
-            <p>The CLRP is directly relevant to Mexican industry. Companies such as <strong>OXXO</strong>, <strong>Bimbo</strong>, and <strong>FEMSA</strong> routinely face decisions about where to place distribution centers while simultaneously optimizing delivery routes. This problem captures the essence of those real-world decisions.</p>
-            <p>From an algorithmic perspective, the CLRP sits at a difficulty sweet spot: it combines strategic facility location with operational routing, so no single algorithmic paradigm dominates. The competition is open to metaheuristics, decomposition methods, branch-and-price, matheuristics, machine learning, and hybrid approaches.</p>
-            <p>Compared to the well-studied CVRP, there is significantly less benchmark saturation for the LRP. This challenge fills a genuine gap — any results carry higher novelty for the community.</p>
-          </div>
+          <h2>Real relevance.<br>Room to innovate.</h2>
         </div>
-        <div>
-          <div style="border: 1px solid var(--rule); aspect-ratio: 4/5; background: var(--paper-2); position: relative; overflow: hidden;">
-            <div data-nodemap data-seed="9" data-nodes="200" data-depots="6" style="position: absolute; inset: 0;"
-                 data-edge="rgba(26,30,60,0.3)" data-node="rgba(26,30,60,0.6)" data-depot="#E8793F" data-paper="#F7F4EE"></div>
-            <div style="position: absolute; bottom: 1rem; left: 1rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-3); letter-spacing: 0.08em; text-transform: uppercase;">
-              FIG 01 · Instance with 200 customers, 6 depots
-            </div>
-          </div>
+        <div class="prose">
+          <p>The CLRP is directly relevant to Mexican industry. Companies such as <strong>OXXO</strong>, <strong>Bimbo</strong>, and <strong>FEMSA</strong> routinely face decisions about where to place distribution centers while simultaneously optimizing delivery routes. This problem captures the essence of those real-world decisions.</p>
+          <p>From an algorithmic perspective, the CLRP sits at a difficulty sweet spot: it combines strategic facility location with operational routing, so no single algorithmic paradigm dominates. The competition is open to metaheuristics, decomposition methods, branch-and-price, matheuristics, machine learning, and hybrid approaches.</p>
+          <p>Compared to the well-studied CVRP, there is significantly less benchmark saturation for the LRP. This challenge fills a genuine gap — any results carry higher novelty for the community.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- INSTANCE DESIGN -->
-  <section class="section section-alt">
+  <section class="section">
     <div class="wrap">
       <div class="section-head">
         <div>
@@ -238,7 +310,7 @@
   </section>
 
   <!-- SPEC COMING SOON -->
-  <section class="section" style="border-bottom: 0;">
+  <section class="section section-alt" style="border-bottom: 0;">
     <div class="wrap">
       <div class="callout" style="border-left: 3px solid var(--orange);">
         <span class="callout-n">NOTE</span>
@@ -294,5 +366,6 @@
   </footer>
 
   <script src="../shared/nodemap.js"></script>
+  <script src="../shared/clrp-viz.js"></script>
 </body>
 </html>
