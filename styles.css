@@ -228,7 +228,24 @@ em { font-style: italic; }
   line-height: 1.5;
   margin-bottom: 2.2rem;
 }
-.hero-cta { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
+.hero-cta { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
+
+.hero-download {
+  margin: 0 0 2.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+}
+.hero-download a {
+  color: var(--ink-3);
+  border-bottom: 1px solid var(--rule-2);
+  padding-bottom: 2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.hero-download a:hover {
+  color: var(--orange);
+  border-bottom-color: var(--orange);
+}
 
 /* ---- Logo lockup ---- */
 .lockup {
