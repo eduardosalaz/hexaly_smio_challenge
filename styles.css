@@ -123,6 +123,7 @@ em { font-style: italic; }
 }
 .nav-brand img { height: 48px; display: block; }
 .nav-brand .nav-brand-hex { height: 36px; }
+.nav-brand-home { display: flex; align-items: center; gap: 0.9rem; }
 .nav-brand-div {
   width: 1px; height: 34px;
   background: var(--rule-2);
@@ -711,6 +712,7 @@ table.tbl tbody tr:hover { background: var(--paper-2); }
   .nav-brand { gap: 0.5rem; }
   .nav-brand img { height: 34px; }
   .nav-brand .nav-brand-hex { height: 24px; }
+  .nav-brand-home { gap: 0.5rem; }
   .nav-brand-div { height: 22px; margin: 0 0.1rem; }
   .hero { padding: 3rem 0 2.5rem; }
   .callout { grid-template-columns: 1fr; gap: 0.5rem; }
