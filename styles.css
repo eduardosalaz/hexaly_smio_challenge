@@ -173,6 +173,14 @@ em { font-style: italic; }
   font-weight: 500 !important;
 }
 .nav-cta:hover { background: var(--orange) !important; color: var(--paper) !important; }
+/* Match heights of the language pill and the register CTA so their edges align */
+.nav-lang, .nav-cta {
+  display: inline-flex;
+  align-items: center;
+  height: 34px;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
 .nav-toggle {
   display: none;
   background: none; border: none;
