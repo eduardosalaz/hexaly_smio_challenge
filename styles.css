@@ -122,6 +122,7 @@ em { font-style: italic; }
   color: var(--ink);
 }
 .nav-brand img { height: 48px; display: block; }
+.nav-brand img[src*="CSMIO_logo_horizontal"] { height: 34px; }
 .nav-brand .nav-brand-hex { height: 36px; }
 .nav-brand-home { display: flex; align-items: center; gap: 0.9rem; }
 .nav-brand-div {
@@ -135,6 +136,7 @@ em { font-style: italic; }
 }
 .nav-links a {
   position: relative;
+  white-space: nowrap;
   padding: 0.5rem 0.85rem;
   font-size: 0.9rem;
   font-weight: 500;
@@ -265,8 +267,9 @@ em { font-style: italic; }
   padding-right: 1rem;
   border-right: 1px solid var(--rule-2);
 }
-.lockup img { height: 88px; opacity: 1; }
-.lockup .hexaly-mark { height: 68px; opacity: 1; }
+.lockup img { height: 64px; opacity: 1; }
+.lockup img[src*="CSMIO_logo_horizontal"] { height: 48px; }
+.lockup .hexaly-mark { height: 48px; opacity: 1; }
 
 /* ---- Stat bar ---- */
 .statbar {
@@ -711,6 +714,7 @@ table.tbl tbody tr:hover { background: var(--paper-2); }
   .nav-toggle { display: block; }
   .nav-brand { gap: 0.5rem; }
   .nav-brand img { height: 34px; }
+  .nav-brand img[src*="CSMIO_logo_horizontal"] { height: 24px; }
   .nav-brand .nav-brand-hex { height: 24px; }
   .nav-brand-home { gap: 0.5rem; }
   .nav-brand-div { height: 22px; margin: 0 0.1rem; }
