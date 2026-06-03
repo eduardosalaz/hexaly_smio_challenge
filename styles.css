@@ -38,7 +38,7 @@
   /* Layout */
   --maxw: 1240px;
   --gutter: 2rem;
-  --nav-h: 68px;
+  --nav-h: 80px;
 }
 
 html { scroll-behavior: smooth; }
@@ -122,8 +122,8 @@ em { font-style: italic; }
   color: var(--ink);
 }
 .nav-brand img { height: 48px; display: block; }
-.nav-brand img[src*="logo_smio"] { height: 60px; }
-.nav-brand img[src*="CSMIO_logo_horizontal"] { height: 40px; }
+.nav-brand img[src*="logo_smio"] { height: 64px; }
+.nav-brand img[src*="CSMIO_logo_horizontal"] { height: 48px; }
 .nav-brand .nav-brand-hex { height: 36px; }
 .nav-brand-home { display: flex; align-items: center; gap: 0.9rem; }
 .nav-brand-div {
@@ -277,9 +277,9 @@ em { font-style: italic; }
   border-right: 1px solid var(--rule-2);
 }
 .lockup img { height: 64px; opacity: 1; }
-.lockup img[src*="logo_smio"] { height: 84px; }
-.lockup img[src*="CSMIO_logo_horizontal"] { height: 48px; }
-.lockup .hexaly-mark { height: 48px; opacity: 1; }
+.lockup img[src*="logo_smio"] { height: 100px; }
+.lockup img[src*="CSMIO_logo_horizontal"] { height: 80px; }
+.lockup .hexaly-mark { height: 64px; opacity: 1; }
 
 /* ---- Stat bar ---- */
 .statbar {
